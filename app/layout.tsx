@@ -1,9 +1,13 @@
-import '@/styles/fonts.css'
+"use client"
+
 import './globals.css'
 //import type { Metadata } from 'next'
 import CustomerChat from '@/components/messenger/Messenger';
+import localFont from 'next/font/local'
 
-
+const cstmFont = localFont({
+  src: '../public/fonts/ArticulatCF-Normal.ttf'
+})
 
 
 export default function RootLayout({
@@ -17,9 +21,8 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <title> {subtitle ? subtitle : ""} | Shield Signalisation </title>
       </head>
-      <body>
+      <body className={cstmFont.className}>
         {children}
         <CustomerChat />
         </body>

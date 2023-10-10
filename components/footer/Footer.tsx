@@ -38,7 +38,7 @@ export default function Footer() {
               <span className="hidden h-1 w-10 rounded bg-darky-900 lg:block"></span>
 
               <div>
-                <h2 className="text-2xl font-medium text-white">Obtenir une soumission</h2>
+                <h2 className="text-2xl font-bold tracking-wide text-darky-700">Obtenir une soumission</h2>
 
               </div>
 
@@ -141,7 +141,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <p className="font-med text-lg text-darky-900">L'entreprise</p>
+                <p className="font-med text-lg text-darky-700">L'entreprise</p>
 
                 <ul className="mt-4 space-y-4 text-sm font-med">
                   <li>
@@ -165,7 +165,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <p className="font-nrml text-lg text-darky-900">Liens utiles</p>
+                <p className="font-nrml text-lg text-darky-700">Liens utiles</p>
 
                 <ul className="mt-4 space-y-4 text-sm">
                   <li>
