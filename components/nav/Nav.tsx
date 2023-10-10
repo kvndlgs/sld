@@ -1,14 +1,23 @@
+"use client"
+
 import Link from 'next/link'
+import * as React from 'react';
+import * as Icon from 'react-icons/lu'
+
+
 
 export default function Nav(){
+  const [isOpen, setIsopen] = React.useState(false);
+
+
     return (
 <header className="bg-white text-darky-800 body-font drop-shadow-md">
-  <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <Link href='/' className="flex title-font font-medium items-center text-darky-700 mb-4 md:mb-0">
+  <div className="container mx-auto  md:flex-wrap p-5 flex items-center">
+    <Link href='/' className="flex title-font font-medium items-center text-darky-700 md:mb-0">
     <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    width='60px'
+    width='50px'
     x={0}
     y={0}
     enableBackground="new 123-184.1 504 541"
@@ -28,17 +37,27 @@ export default function Nav(){
     </g>
   </svg>
     </Link>
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <Link href='/services' className="mr-5 hover:text-primary">Nos services</Link>
-      <Link href='/about' className="mr-5 hover:text-primary">L'entreprise</Link>
-      <Link href='/job' className="mr-5 hover:text-primary">Carriere</Link>
-      <Link href='/contact' className="mr-5 hover:text-primary">Nous joindre</Link>
+    <nav className="md:ml-auto md:mr-auto md:flex flex-wrap items-center text-base justify-center hidden">
+      <Link href='/services' className="mr-8 hover:text-primary font-normal">Nos services</Link>
+      <Link href='/about' className="mr-8 hover:text-primary">L'entreprise</Link>
+      <Link href='/job' className="mr-8 hover:text-primary">Carrière</Link>
+      <Link href='/contact' className="mr-8 hover:text-primary">Nous joindre</Link>
     </nav>
-    <Link href='/contact' className="inline-flex items-center bg-primary text-white border-0  px-5 py-3 focus:outline-none hover:bg-primary-700 rounded-lg text-base mt-4 md:mt-0">Soumission
+    <nav className={isOpen ? "absolute top-0 bottom-0 bg-darky flex-col items-center justify-around right-0 left-0 h-full w-full" : "hidden"}>
+    <Link href='/services' className="p-4 text-white hover:text-primary font-normal">Nos services</Link>
+    <Link href='/about' className="p-4 text-white hover:text-primary">L'entreprise</Link>
+    <Link href='/job' className="p-4 text-white hover:text-primary">Carrière</Link>
+    <Link href='/contact' className="p-4 text-white hover:text-primary">Nous joindre</Link>
+  </nav>
+    <Link href='/contact' className="md:inline-flex hidden items-center bg-primary text-white border-0  px-3 py-2 focus:outline-none hover:bg-primary-700 rounded-md mt-4 md:mt-0">Soumission
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg>
     </Link>
+    <button className="md:hidden p-4 bg-transparent flex items-center justify-center self-end" onClick={(e) => setIsopen(!isOpen)}>
+      <Icon.LuMenu size="24" />
+    </button>
+
   </div>
 </header>
     )

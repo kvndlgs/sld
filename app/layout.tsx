@@ -16,13 +16,12 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
         <title> {subtitle ? subtitle : ""} | Shield Signalisation </title>
       </head>
       <body>
-        <CustomerChat />
         {children}
-
+        <CustomerChat />
         </body>
     </html>
   )
