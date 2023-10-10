@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-4 space-y-4 lg:mt-0">
-              <span className="hidden h-1 w-10 rounded bg-darky-700 lg:block"></span>
+              <span className="hidden h-1 w-10 rounded bg-darky-900 lg:block"></span>
 
               <div>
                 <h2 className="text-2xl font-medium text-white">Obtenir une soumission</h2>
@@ -49,13 +49,13 @@ export default function Footer() {
                   <input
                     type="text"
                     id="nom"
-                    placeholder="Nom complet"
-                    className="w-full border-none rounded-md px-2 py-2 focus:border-transparent focus:ring-transparent sm:text-sm"
+                    placeholder="Nom"
+                    className="w-full border-none font-nrml rounded-md px-2 py-2 focus:border-transparent focus:ring-transparent sm:text-sm"
                   />
                 </div>
                 <div
                   className="flex-col pb-2" >
-                  <label htmlFor="email" className="text-white pb-32">Courriel</label>
+                  <label htmlFor="email" className="text-white pb-32 font-nrml">Courriel</label>
                   <input
                     type="email"
                     id="email"
@@ -76,14 +76,14 @@ export default function Footer() {
                 </div>
                   <div
                   className="flex-col pb-2" >
-                  <label htmlFor="phone" className="text-white pb-32">Details</label>
+                  <label htmlFor="phone" className="text-white pb-32 font-nrml">Details</label>
                   <textarea
                     id="message"
                     placeholder="Entrez votre message"
-                    className="w-full border-none rounded-md px-2 py-2 focus:border-transparent focus:ring-transparent sm:text-sm"
+                    className="w-full border-none rounded-md px-2 py-2 focus:border-transparent focus:ring-transparent sm:text-sm font-nrml"
                   ></textarea>
                 </div>
-                <button type="submit" className="bg-primary mt-2 px-4 py-2 font-normal text-white rounded-md w-full">
+                <button type="submit" className="bg-primary mt-2 px-4 py-2 font-nrml text-white rounded-md w-full">
                   Envoyer </button>
               </form>
             </div>
@@ -117,23 +117,23 @@ export default function Footer() {
 
             <div className="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-3">
               <div>
-                <p className="font-normal text-lg text-darky-600">Nos services</p>
+                <p className="font-med text-lg text-darky-700 tracking-wide">Nos services</p>
 
-                <ul className="mt-4 space-y-4 text-sm">
+                <ul className="mt-4 space-y-4 text-sm font-med">
                   <li>
-                    <a href="/services/signalisation" className="text-white font-normal transition hover:opacity-75">
+                    <a href="/services/signalisation" className="text-darky-500 transition hover:opacity-75">
                       Signalisation routiere
                     </a>
                   </li>
 
                   <li>
-                    <a href="/services/escorte" className="text-white font-normal transition hover:opacity-75">
+                    <a href="/services/escorte" className="text-darky-500 transition hover:opacity-75">
                       Vehicule d'accompagnement
                     </a>
                   </li>
 
                   <li>
-                    <a href="/services/location" className="text-white font-normal transition hover:opacity-75">
+                    <a href="/services/location" className="text-darky-500 transition hover:opacity-75">
                       Location d'equipement
                     </a>
                   </li>
@@ -141,23 +141,23 @@ export default function Footer() {
               </div>
 
               <div>
-                <p className="font-normal text-lg text-darky-600">L'entreprise</p>
+                <p className="font-med text-lg text-darky-900">L'entreprise</p>
 
-                <ul className="mt-4 space-y-4 text-sm">
+                <ul className="mt-4 space-y-4 text-sm font-med">
                   <li>
-                    <a href="/job" className="text-white font-normal transition hover:opacity-75">
+                    <a href="/job" className="text-darky-500 transition hover:opacity-75">
                       Carriere
                     </a>
                   </li>
 
                   <li>
-                    <a href="/about" className="text-white font-normal transition hover:opacity-75">
+                    <a href="/about" className="text-darky-500 transition hover:opacity-75">
                       L'equipe
                     </a>
                   </li>
 
                   <li>
-                    <a href="/contact" className="text-white font-normal transition hover:opacity-75">
+                    <a href="/contact" className="text-darky-500 transition hover:opacity-75">
                       Nous joindre
                     </a>
                   </li>
@@ -165,7 +165,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <p className="font-normal text-lg text-darky-600">Liens utiles</p>
+                <p className="font-nrml text-lg text-darky-900">Liens utiles</p>
 
                 <ul className="mt-4 space-y-4 text-sm">
                   <li>
@@ -198,19 +198,19 @@ export default function Footer() {
                 </li>
 
                 <li>
-                  <a href="#" className="text-darky-700 font-normal transition hover:opacity-75">
+                  <a href="#" className="text-darky-700 font-nrml transition hover:opacity-75">
                     Politique de confidentialite
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="text-darky-700 font-normal transition hover:opacity-75">
+                  <a href="#" className="text-darky-700 font-nrml transition hover:opacity-75">
                     Cookies
                   </a>
                 </li>
               </ul>
 
-              <p className="mt-8 text-sm font-normal text-darky-700">
+              <p className="mt-8 text-sm font-nrml text-darky-700">
                 &copy; 2023. Shield signalisation Inc.
               </p>
             </div>
