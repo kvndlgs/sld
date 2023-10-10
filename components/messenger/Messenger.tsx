@@ -8,7 +8,7 @@ export default function CustomerChat(){
     <div>
       <div id="fb-root"></div>
       <div id="fb-customer-chat" className="fb-customerchat"></div>
-      <Script strategy='lazyOnload'>
+      <Script strategy='lazyOnload' id="customer-chat">
         {`var chatbox = document.getElementById('fb-customer-chat');
         chatbox.setAttribute("page_id", "118775154651491");
         chatbox.setAttribute("attribution", "biz_inbox");
