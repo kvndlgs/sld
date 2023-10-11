@@ -11,9 +11,9 @@ export default function Nav(){
 
 
     return (
-<header className="bg-white text-darky-800 drop-shadow-md">
-  <div className="container mx-auto  md:flex-wrap p-5 flex items-center md:justify-between">
-    <Link href='/' className="flex font-nrml items-center text-darky-700 md:mb-0">
+<header className="bg-white text-darky-800 drop-shadow-md h-auto">
+  <div className="container mx-auto flex-row flex-nowrap md:flex-wrap p-5 flex items-center md:space-between">
+    <Link href='/' className="flex font-normal items-center text-darky-700 md:mb-0">
     <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
@@ -37,25 +37,34 @@ export default function Nav(){
     </g>
   </svg>
     </Link>
-    <nav className="md:ml-auto md:mr-auto md:flex flex-wrap items-center text-base justify-center hidden">
-      <Link href='/services' className="mr-8 hover:text-primary font-nrml">Nos services</Link>
-      <Link href='/about' className="mr-8 hover:text-primary font-nrml">L'entreprise</Link>
-      <Link href='/job' className="mr-8 hover:text-primary font-nrml">Carrière</Link>
-      <Link href='/contact' className="mr-8 hover:text-primary font-nrml">Nous joindre</Link>
+    <div className="hover:cursor-pointer md:hidden absolute top-6 right-6 p-4 bg-transparent flex items-center self-end justify-center z-50" onClick={(e) => setIsopen(!isOpen)}>
+      <Icon.LuMenu size="24" className="text-darky-900" />
+    </div>
+    <nav className="md:ml-auto md:mr-auto md:flex flex-wrap items-center justify-center hidden">
+      <Link href='/services' className="mr-10 hover:text-primary font-normal">Nos services</Link>
+      <Link href='/about' className="mr-10 hover:text-primary font-normal">L'entreprise</Link>
+      <Link href='/job' className="mr-10 hover:text-primary font-normal">Carrière</Link>
+      <Link href='/contact' className="mr-10 hover:text-primary font-normal">Nous joindre</Link>
     </nav>
-    <nav className={isOpen ? "absolute top-0 bottom-0 bg-darky flex-col items-center justify-around right-0 left-0 h-full w-full" : "hidden"}>
-    <Link href='/services' className="p-4 text-white hover:text-primary font-nrml">Nos services</Link>
-    <Link href='/about' className="p-4 text-white hover:text-primary font-nrml">L'entreprise</Link>
-    <Link href='/job' className="p-4 text-white hover:text-primary font-nrml">Carrière</Link>
-    <Link href='/contact' className="p-4 text-white hover:text-primary font-nrml">Nous joindre</Link>
+    <nav className={isOpen ? "absolute md:hidden z-40 bottom-0 top-[160px] bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full" : "hidden"}>
+    <ul className="flex flex-col w-full h-full items-between justify-center py-12 mt-18">
+      <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
+    <Link href='/services' className="p-4 text-white hover:text-primary font-normal">Nos services</Link>
+    </li>
+    <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
+    <Link href='/about' className="p-4 text-white hover:text-primary font-normal">L'entreprise</Link>
+    </li>
+    <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
+    <Link href='/job' className="p-4 text-white hover:text-primary font-normal">Carrière</Link>
+    </li>
+    <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900 drop-shadow-sm">
+    <Link href='/contact' className="p-4 text-white hover:text-primary font-normal">Nous joindre</Link>
+    </li>
+    </ul>
   </nav>
-    <Link href='/contact' className="md:inline-flex hidden items-center bg-primary text-white border-0  px-3 py-2 focus:outline-none hover:bg-primary-700 rounded-md mt-4 md:mt-0">
+    <Link href='/contact' className="md:inline-flex text-darky hidden items-center bg-primary text-white border-0  px-4 py-2 focus:outline-none hover:bg-primary-700 rounded-md mt-4 md:mt-0">
       Soumission
     </Link>
-    <button className="md:hidden p-4 bg-transparent flex items-center justify-center" onClick={(e) => setIsopen(!isOpen)}>
-      <Icon.LuMenu size="24" />
-    </button>
-
   </div>
 </header>
     )

@@ -6,7 +6,24 @@ import CustomerChat from '@/components/messenger/Messenger';
 import localFont from 'next/font/local'
 
 const cstmFont = localFont({
-  src: '../public/fonts/ArticulatCF-Normal.ttf'
+
+  src:[{
+
+  path: '../public/fonts/RightGrotesk-Regular.otf',
+  weight: '400',
+  style: 'normal'
+  },
+  {
+    path: '../public/fonts/RightGrotesk-Medium.otf',
+    weight: '500',
+    style: 'medium'
+  },
+  {
+    path: '../public/fonts/RightGrotesk-Bold.otf',
+    weight: '800',
+    style: 'bold'
+  }
+]
 })
 
 

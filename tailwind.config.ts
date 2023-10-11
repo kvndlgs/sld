@@ -31,15 +31,6 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      fontFamily: {
-        'sans': ['(--var-font-myfont)'],
-        'title':  ['(--var-font-myfont)'],
-        'nrml':  ['(--var-font-myfont)'],
-        'med':  ['(--var-font-myfont)'],
-        'hlfbld':  ['(--var-font-myfont)'],
-        'bld':  ['(--var-font-myfont)'],
-        'hvy':  ['(--var-font-myfont)'],
-    },
       
     },
   },
