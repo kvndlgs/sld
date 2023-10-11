@@ -2,7 +2,7 @@ import RootLayout from '@/app/layout';
 import Wrapper from '@/components/wrapper/Wrapper'
 import Image from 'next/image';
 import Link from 'next/link';
-import * as Icon from 'react-icons/Lu'
+import * as Icon from 'react-icons/lu'
 
 
 export function ServiceItem({title, link, img, description}) {
