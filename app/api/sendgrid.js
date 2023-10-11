@@ -1,8 +1,8 @@
 import sgMail from '@sendgrid/mail';
 
 
-const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.sendgrid.env.SENDGRID_API_KEY)
 const msg = {
   to: 'kvndesloges@gmail.com', // Change to your recipient
   from: 'info@shieldsignalisation.com', // Change to your verified sender
