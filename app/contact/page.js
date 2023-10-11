@@ -1,5 +1,12 @@
+import RootLayout from '@/app/layout'
+import Wrapper from '@/components/wrapper/Wrapper'
+
 export default function Contact(){
     return (
-        <h1>about</h1>
+        <RootLayout>
+        <Wrapper>
+            <h1> Contact </h1>
+        </Wrapper>
+    </RootLayout>
     )
 }

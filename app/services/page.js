@@ -20,14 +20,29 @@ export function ServiceItem({title, link, img, description}) {
 }
 
 
+function FeatureItem({img, title, description}) {
+    return (
+        <div className="py-4 self-start">
+            <div className="inline-flex items-center justify-start mx-auto">
+                <div className="text-primary p-4">
+                 {img}
+                 </div>
+                <h3> { title }</h3>
+                <p>{ description}</p>
+            </div>
+           
+        </div>
+    )
+}
+
 export default function Services(){
     return (
         <RootLayout>
             <Wrapper>
-                <div className="bg-secondary py-10 md:py-16 px-16 md:px-20">
+                <div className=" py-10 md:py-16 px-16 md:px-20">
                     <div className="w-full flex flex-col items-center justify-center md:justify-around py-8 mx-auto text-center">
                         <h4 className="text-md text-darky-300 font-medium pb-4"> Nos services</h4>
-                        <h2 className="text-xl text-darky-600 font-semibold pb-8">Nous prenons votre sécurité au serieux </h2>
+                        <h2 className="text-xl text-darky-600 font-semibold pb-8">Oser changer pour le mieux </h2>
                         <span className="w-32 h-1 bg-primary-200 rounded-lg "></span>
                     </div>
                     <div className="flex flex-wrap items-around justify-around pt-8">
@@ -35,7 +50,7 @@ export default function Services(){
                           title="Signalisation routière"
                           description="Nos experts vous permettrons d’atteindre vos objectifs en tout sécurité"
                           img="/images/signalisation-icon.png"
-                          link="/"
+                          link="/services/signalisation"
                         />
                         <ServiceItem
                           title="Fermeture de voie"
@@ -58,10 +73,45 @@ export default function Services(){
                       
                     </div>
                 </div>
-                */ services /*
-                <div>
-                    Nos experts vous permettrons d’atteindre vos objectifs en tout sécurité
+       
+                <div className="w-full bg-darky-50 py-10 md:py-16 px-16">
+                    <div className="container">
+                    <div className="w-full flex flex-col items-center justify-center md:justify-around py-8 mx-auto text-center">
+                        <h4 className="text-md text-darky-400 font-medium pb-4"> Pourquoi nous ?</h4>
+                        <h2 className="text-xl text-darky-700 font-semibold pb-8">  Nous prenons votre sécurité au serieux </h2>
+                        <span className="w-32 h-1 bg-primary-200 rounded-lg "></span>
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center justify-between py-12">
+                    <div className=" w-full md:w-1/2 flex items-center justify-center p-4">
+                       <Image src="/images/workers.png" width="500" height="500" alt="yo" />
+                    </div>
+                    <div className="flex flex-col items-center justify-center md:w-1/2 w-full py-4 md:py-0">
+                        <FeatureItem
+                          img={<Icon.LuShield size="32"  />}
+                          title="On sait c'qu'on fait."
+                          description=""
+                        />
+                        <FeatureItem
+                          img={<Icon.LuClock size="32" />}
+                          title="Disponible 24 Heures sur 24, 7 jours sur 7"
+                          description=""
+                        />
+                        <FeatureItem
+                          img={<Icon.LuMapPin  size="32" />}
+                          title="Partout au Québec." 
+                          description=""
+                        />
+                        <FeatureItem
+                          img={<Icon.LuCloudLightning  size="32" />}
+                          title="Réponse rapide." 
+                          description=""
+                        />
+                    </div>
+    
+                    </div>
+                    </div>
                 </div>
+
             </Wrapper>
         </RootLayout>
     )

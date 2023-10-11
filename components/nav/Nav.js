@@ -18,12 +18,11 @@ export default function Nav(){
     y={0}
     enableBackground="new 123-184.1 504 541"
     viewBox="123 -184.1 504 541"
+    id="logo"
   >
     <path
       id="bg"
       d="M374.8 343.8c-83.2-26.5-154.5-79.5-204.1-148.9-23.3-32.7-35.7-71.9-35.7-112V-92.3c66.8-50.1 149.8-79.8 239.8-79.8s173 29.7 239.8 79.8V82.9c0 40.1-12.4 79.3-35.7 111.9-49.7 69.6-121 122.5-204.1 149z"
-
-        fill="#3B4951"
     />
     <g id="letters">
       <path
@@ -42,7 +41,7 @@ export default function Nav(){
       <Link href='/job' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Carrière</Link>
       <Link href='/contact' className=" text-darky-600 px-4 hover:text-darky-400 font-medium">Nous joindre</Link>
     </nav>
-    <nav className={isOpen ? "absolute md:hidden z-40 bottom-0 top-[160px] bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full" : "hidden"}>
+    <nav className={isOpen ? "absolute md:hidden z-40 bottom-0 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full" : "hidden"}>
     <ul className="flex flex-col w-full h-full items-between justify-center py-12 mt-18">
       <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
     <Link href='/services' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Nos services</Link>
@@ -60,7 +59,7 @@ export default function Nav(){
   </nav>
     <Link 
     href='/contact' 
-    className="md:inline-flex text-darky font-semibold hidden items-center bg-primary shadow-sm text-primary-900 border-0  
+    className="md:inline-flex font-semibold hidden items-center bg-primary shadow-sm text-primary-900 border-0  
     px-4 py-3 focus:outline-none hover:bg-primary-500 rounded-md mt-4 md:mt-0">
       Soumission rapide
     </Link>

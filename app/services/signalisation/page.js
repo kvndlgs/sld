@@ -1,11 +1,12 @@
 import RootLayout from '@/app/layout'
 import Wrapper from '@/components/wrapper/Wrapper'
 
-export default function Job(){
+
+export default function Signalisation(){
     return (
         <RootLayout>
             <Wrapper>
-                <h1> Job </h1>
+                <h1> Signalisation routière</h1>
             </Wrapper>
         </RootLayout>
     )

@@ -10,7 +10,7 @@ export default function Home() {
       <Wrapper>
         <Hero />
         {/** services */}
-        <div className="bg-secondary py-10 md:py-16 px-16 md:px-20">
+        <div className="bg-white py-10 md:py-16 px-16 md:px-20">
                     <div className="w-full flex flex-col items-center justify-center md:justify-around py-8 mx-auto text-center">
                         <h4 className="text-md text-darky-300 font-medium pb-4"> Nos services</h4>
                         <h2 className="text-xl text-darky-600 font-semibold pb-8">Nous prenons votre sécurité au serieux </h2>
