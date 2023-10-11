@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import * as Icon from 'react-icons/Lu'
+import * as Icon from 'react-icons/lu'
 import * as React from 'react';
 
 export default function Nav(){
