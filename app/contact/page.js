@@ -26,7 +26,7 @@ export default function Contact(){
         let tempErrors = {};
         let isValid = true;
 
-        if(fullname.length <= 0) {
+        if(fullname.lengg <= 0) {
             tempErrors["fullname"] = true;
             isValid = false;
         }
@@ -60,7 +60,7 @@ export default function Contact(){
         e.preventDefault();
 
         let isValidForm = handleValidation();
-        if(!isValidForm) {  
+        if(isValidForm) {  
             setButtonText("Envois en cours...");
 
         const res = await fetch("/api/sendgrid", {
