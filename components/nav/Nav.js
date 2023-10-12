@@ -32,25 +32,25 @@ export default function Nav(){
     </g>
   </svg>
     </Link>
-    <div className="hover:cursor-pointer md:hidden absolute top-6 right-6 p-4 bg-transparent flex items-center self-end justify-center z-50" onClick={(e) => setIsopen(!isOpen)}>
-      <Icon.LuMenu size="24" className="text-darky-900" />
+    <div className="hover:cursor-pointer md:hidden absolute top-4 right-6 p-4 bg-transparent flex items-center self-end justify-center z-50" onClick={(e) => setIsopen(!isOpen)}>
+      <Icon.LuMenu size="24" className="text-darky-400" />
     </div>
     <nav className="md:ml-auto lg:pl-8 md:pl-0 border-darky md:mr-auto md:flex flex-wrap items-center justify-center hidden">
       <Link href='/services' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Nos services</Link>
-      <Link href='/about' className="text-darky-600 px-4 hover:text-darky-400 font-medium">L'entreprise</Link>
-      <Link href='/job' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Carrière</Link>
+      <Link href='/' className="text-darky-600 px-4 hover:text-darky-400 font-medium">L'entreprise</Link>
+      <Link href='/' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Carrière</Link>
       <Link href='/contact' className=" text-darky-600 px-4 hover:text-darky-400 font-medium">Nous joindre</Link>
     </nav>
-    <nav className={isOpen ? "absolute md:hidden z-40 bottom-0 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full" : "hidden"}>
+    <nav className={isOpen ? "absolute md:hidden z-50 bottom-0 top-6 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full" : "hidden"}>
     <ul className="flex flex-col w-full h-full items-between justify-center py-12 mt-18">
       <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
     <Link href='/services' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Nos services</Link>
     </li>
     <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
-    <Link href='/about' className="p-4 text-darky-300 hover:text-darky-100 font-medium">L'entreprise</Link>
+    <Link href='/' className="p-4 text-darky-300 hover:text-darky-100 font-medium">L'entreprise</Link>
     </li>
     <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
-    <Link href='/job' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Carrière</Link>
+    <Link href='/' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Carrière</Link>
     </li>
     <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900 drop-shadow-sm">
     <Link href='/contact' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Nous joindre</Link>

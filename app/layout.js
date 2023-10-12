@@ -1,3 +1,5 @@
+
+
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 import Fb from '@/components/messenger/Fb'
@@ -8,11 +10,6 @@ const montserrat = Montserrat({
   style: 'normal'
 });
 
-
-export const metadata = {
-  title: 'Shield signalisation Inc',
-  description: 'Site officielle de Shield signalisation',
-}
 
 export default function RootLayout({ children }) {
   return (
