@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Hero(){
     return (
-        <div className="w-full px-16 py-12 bg-primary-200">
+        <div className="w-full md:px-16 px-4 py-12 bg-primary-200">
             <div className="md:flex-row flex items-center justify-between flex-col w-full">
                 <div className="w-full md:w-1/2 md:p-5 p-2">
                     <Image src='/images/hero-truck.png' width={800} height={800} alt='truck' />
