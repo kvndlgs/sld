@@ -29,7 +29,7 @@ export default function Contact(){
     return (
         <RootLayout>
         <Wrapper>
-          <div className="w-full pb-30 py-16 px-12">
+          <div className="w-full pb-30 py-16 px-4 md:px-12">
             <div className="w-full flex flex-col items-center justify-around pt-6 pb-16 mx-auto">
                 <h4 className="text-md text-darky-300 font-medium "> Nous joindre </h4>
                 <h2 className="text-xl font-darky-800 font-semibold pb-4"> Faites-nous parts de vos projets </h2>
