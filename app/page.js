@@ -31,13 +31,13 @@ export default function Home() {
                         />
                         <ServiceItem
                           title="Location d'équipement"
-                          description="Louer nos équipements a la fine pointe de la technologie pour vos chantiers."
+                          description="Louer nos équipements a la fine pointe de la technologie."
                           img="/images/location-icon.png"
                           link="/"
                         />
                         <ServiceItem
                           title="24 Heures sur 24, 7 jours sur 7"
-                          description="Nous sommes prêts a intervenir en tout temps pour vos urgences. partout au Québec."
+                          description="Nous sommes prêts a intervenir rapidement et en tout temps."
                           img="/images/services-24h.png"
                           link="/"
                         />
