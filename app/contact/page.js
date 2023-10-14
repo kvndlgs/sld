@@ -9,12 +9,12 @@ export default function Contact(){
     const [fullname, setFullname] = React.useState();
     const [email, setEmail] = React.useState();
     const [phone, setPhone] = React.useState();
-    const [role, setRole] = React.useState();   
-    const [file, setFile] = React.useState();   
+    const [role, setRole] = React.useState();     
     const [message, setMessage] = React.useState(); 
     const [company, setCompany] = React.useState();
 
     const [errors, setErrors] = React.useState();
+
 
     const [buttonText, setButtonText] = React.useState("Envoyer");
 
@@ -26,7 +26,7 @@ export default function Contact(){
         let tempErrors = {};
         let isValid = true;
 
-        if(fullname.lengg <= 0) {
+        if(fullname.length <= 0) {
             tempErrors["fullname"] = true;
             isValid = false;
         }
@@ -56,12 +56,15 @@ export default function Contact(){
         return isValid;
     };
 
+    const isValidIcon = <Icon.LuLoader size="18" className="mr-2 text-primary-800" />;
+    const buttonIcon = <Icon.LuArrowRight size="18" className="mr-2 text-primary-800" />;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         let isValidForm = handleValidation();
         if(isValidForm) {  
-            setButtonText("Envois en cours...");
+            setButtonText("C'est fait!");
 
         const res = await fetch("/api/sendgrid", {
             body: JSON.stringify({
@@ -70,7 +73,6 @@ export default function Contact(){
                 phone: phone,
                 company: company,
                 role: role,
-                file: file,
                 message: message,
             }),
             headers: {
@@ -91,85 +93,136 @@ export default function Contact(){
             setPhone(" ");
             setCompany(" ");
             setRole(" ");
-            setFile(" ");
             setMessage(" ");
             return;
         }
         setShowSuccessMessage(true);
         setShowFailureMessage(false);
-        setButtonText("Envoyé");
+        setButtonText("Envoyer");
         setFullname(" ");
         setEmail(" ");
         setPhone(" ");
         setCompany(" ");
         setRole(" ");
-        setFile(" ");
         setMessage(" ");
      }
-        console.log(fullname, email, company, phone, role, file, message);
+        console.log(fullname, email, company, phone, role, message);
     };
 
 
+    const Content = 
+      {
+        "fr": {
+          "title": "Faites-nous part de vos projets",
+          "subtitle": "Nous joindre",
+          "text": "Notre équipe se fera un plaisir de vous aider a mettre en place une solution adapté a tout vos besoins en matière de signalisation routières.",
+          "labels": {
+            "nom": "Nom", 
+            "courriel": "Courriel",
+            "telephone": "Téléphone",
+            "entreprise": "Entreprise",
+            "role": "Role",
+            "message": "Message", 
+          },
+          "placeholders": {
+            "nom": "John Doe",
+            "courriel": "Entrez votre adresse courriel",
+            "telephone": "+1-438-526-5465",
+            "entreprise": "Entrez le nom de l'entreprise",
+            "role": "Votre role dans l'entreprise",
+            "message": "Entrez les détails",
+          },
+          "button": {
+            "send": "Envoyer",
+            "Sending": "Envoi en cours",
+            "success": "C'est fait!",
+            "error": "Envoyer",
+          },
+        },
+          "en": {
+            "title": "Let us know about your projects",
+            "subtitle": "Contact us",
+            "text": "Our team will be happy to help you put in place a solution adapted to all your needs in terms of traffic control.",
+            "labels": {
+              "name": "Name", 
+              "email": "Email",
+              "phone": "Phone",
+              "company": "Company",
+              "role": "Role",
+              "message": "Message", 
+            },
+            "placeholders": {
+              "name": "John Doe",
+              "email": "Enter your email address",
+              "phone": "+1-438-526-5465",
+              "company": "Enter the name of the company",
+              "role": "Your role in the company",
+              "message": "Enter the details",
+            },
+          }    
+        }
+    
     return (
         <RootLayout>
         <Wrapper>
-          <div className="w-full pb-30 py-16 px-4 md:px-12">
-            <div className="w-full flex flex-col items-center justify-around pt-6 pb-16 mx-auto">
-                <h4 className="text-md text-darky-300 font-medium "> Nous joindre </h4>
-                <h2 className="text-xl font-darky-800 font-semibold pb-4"> Faites-nous parts de vos projets </h2>
+          <div className="w-full py-10 md:py-10 px-4 md:px-12">
+            <div className="flex flex-col md:flex-row  items-center justify-around md:py-8 py-4 mx-auto text-center">
+            <div className="w-full md:w-1/2 flex flex-col md:items-start items-center justify-around pt-6 pb-16 mx-auto">
+                <h4 className="text-md text-darky-300 font-medium pb-4"> { Content.fr.subtitle } </h4>
+                <h2 className="text-xl text-darky-700 font-semibold pb-6">{ Content.fr.title } </h2>
                 <span className="w-20 h-1 bg-primary-400"></span>
+                <p className='text-base font-medium mt-4 text-center md:text-left '>
+                {Content.fr.text}
+                </p>
             </div>
-            <form onSubmit={handleSubmit} className="md:w-1/2 w-full md:px-8 md:pt-8 md:pb-10 rounded-xl shadow-md bg-darky mx-auto py-10 px-4 border-darky-400 border-2">
-              <div className="flex flex-col items-start justify-around pt-3 pb-4">
-                <label htmlFor="fullname" className="text-darky-100 font-medium">Nom</label>
-                <input value={fullname} onChange={(e) => setFullname(e.target.value)} type="text" name="fullname" id="fullname"  placeHolder="John Doe" className="w-full py-3 px-4 text-darky bg-darky-100 rounded-md" />
+            <div className="md:w-1/2 w-full py-4">
+            <form onSubmit={handleSubmit} className="py-2 w-full px-4">
+              <div className="flex flex-col items-start justify-between pt-2 pb-3">
+                <label htmlFor="fullname" className="text-darky-400 font-medium text-base ml-2">Nom</label>
+                <input value={fullname} onChange={(e) => setFullname(e.target.value)} type="text" name="fullname" id="fullname"  placeHolder="John Doe"
+                className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm" 
+                />
               </div>
-              <div className="pb-4">
-                <label htmlFor="email" className="text-darky-100 font-medium">Courriel</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email"  placeHolder="johndoe@votreentreprise.ca" className="w-full py-3 px-4 text-darky bg-darky-100 rounded-md" />
+              <div className="w-full flex flex-row justify-between items-between">
+              <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2">
+                <label htmlFor="email" className="text-darky-400 font-medium text-base ml-2">Courriel</label>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email"  placeHolder="johndoe@votreentreprise.ca" 
+                className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm" 
+                />
               </div>
-              <div className="pb-4">
-                <label htmlFor="phone" className="text-darky-100 font-medium">Téléphone</label>
-                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="phone" name="phone"  placeHolder="+1-438-526-5465" id="phone" className="w-full py-3 px-4 text-darky bg-darky-100 rounded-md" />
+              <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pl-2">
+                <label htmlFor="phone" className="text-darky-400 font-medium text-base ml-2">Téléphone</label>
+                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="phone" name="phone"  placeHolder="+1-438-526-5465" id="phone" 
+                className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm" />
               </div>
-              <div className="pb-4">
-                <label htmlFor="company" className="text-darky-100 font-medium">Entreprise</label>
-                <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" name="company"  placeHolder="Entrer le nom de l'entreprise" id="phone" className="w-full py-3 px-4 text-darky bg-darky-100 rounded-md" />
               </div>
-              <div className="pb-4">
-                <label htmlFor="role" className="text-darky-100 font-medium">Role</label>
-                <input value={role} onChange={(e) => setRole(e.target.value)} type="role" name="role" id="role" placeHolder="Votre role dans l'entreprise" className="w-full py-3 px-4 text-darky bg-darky-100 rounded-md" />
+              <div className="w-full flex flex-row justify-between items-start">
+              <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2">
+                <label htmlFor="company" className="text-darky-400 font-medium text-base ml-2">Entreprise</label>
+                <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" name="company"  placeHolder="Entrer le nom de l'entreprise" id="phone" 
+                className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm"  />
               </div>
-              <div className="pb-4">
-                <label htmlFor="file" className="text-darky-100 font-medium">Fichier</label>
-                <input value={file} onChange={(e) => setFile(e.target.value)} type="file" name="file" id="file" placeHolder="Joignez vos fichiers ici" className="w-full py-3 px-4 text-darky bg-darky-100 rounded-md" />
+              <div className="w-full flex flex-col items-start justify-around  pt-2 pb-3 pl-2">
+                <label htmlFor="role" className="text-darky-400 font-medium text-base ml-2">Role</label>
+                <input value={role} onChange={(e) => setRole(e.target.value)} type="role" name="role" id="role" placeHolder="Votre role dans l'entreprise" 
+                className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm"  />
               </div>
-              <div className="pb-4">
-                <label htmlFor="message" className="text-darky-100 font-medium">Message</label>
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)}  name="message" id="message" placeHolder="Entrez les détails" className="w-full pt-3 pb-8 px-4 text-darky bg-darky-100 rounded-md"></textarea>
               </div>
-              <div className="pb-2">
+              <div className="flex flex-col items-start justify-around pt-2 pb-3">
+                <label htmlFor="message" className="text-darky-400 font-medium text-base ml-2">Message</label>
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)}  name="message" id="message" placeHolder="Entrez les détails" 
+                className="w-full pt-3 pb-10 px-2 text-darky bg-darky-100 rounded-sm"></textarea>
+              </div>
+              <div className="flex flex-col items-start justify-around pt-2 pb-3">
                 <button 
                 type="submit" 
-            className="self-center py-4 px-12 text-primary-50 rounded-md shadow-md bg-primary inline-flex items-center justify-around font-medium"> {buttonText} <Icon.LuArrowRightCircle className="ml-4" size="18px" /> </button>
+            className="self-center py-4 px-10 text-primary-800 font-semibold rounded-sm shadow-md bg-primary inline-flex items-center justify-around font-medium"> 
+             {buttonText} <span>{ !errors && (<Icon.LuArrowRight size="24" className="ml-3 text-primary-800" /> )} { errors && ( <Icon.LuSmile size="24" className="ml-3 text-primary-800" /> ) } </span> </button>
               </div>
-              <div className="absolute w-xl h-auto top-10 left-10 z-70">
-                {showSuccessMessage && (
-                    <div className="absolute w-20 bg-green-100 p-5 top-8 left-8">
-                    <p className="text-green-500 font-semibold text-sm my-2">
-                        Merci! Votre message a bien été envoyer 
-                    </p>
-                    </div>
-                )}
-                {showFailureMessage && (
-                    <div className="absolute w-20 bg-red-100 p-5 top-8 left-8">
-                    <p className="text-red-500 font-semibold text-sm my-2">
-                        Awww, vous avez brisé l'internet! 
-                    </p>
-                    </div>
-                )}
-              </div>
+          
             </form>
+            </div>
+            </div>
           </div>
         </Wrapper>
     </RootLayout>

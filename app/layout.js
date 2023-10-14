@@ -2,6 +2,7 @@
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 import Fb from '@/components/messenger/Fb'
+import GoogleAnalytics from '@/components/google/GoogleAnalytics';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
               <meta name="description" content="Entreprise de signalisation routière. Nous sommes situés à Saint-Jérôme et nous offrons nos services partout au Québec."/>
               <title> Shield signalisation </title>
     </head>
+    <GoogleAnalytics />
                   <body className={montserrat.className}>
                     {children}
                     <>

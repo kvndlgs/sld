@@ -33,27 +33,27 @@ export default function Nav(){
   </svg>
     </Link>
     <div className="hover:cursor-pointer md:hidden absolute top-4 right-6 p-4 bg-transparent flex items-center self-end justify-center z-50" onClick={(e) => setIsopen(!isOpen)}>
-      <Icon.LuMenu size="24" className="text-darky-400" />
+      <Icon.LuMenu size="26" className="text-darky-400" />
     </div>
     <nav className="md:ml-auto lg:pl-8 md:pl-0 border-darky md:mr-auto md:flex flex-wrap items-center justify-center hidden">
       <Link href='/services' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Nos services</Link>
-      <Link href='/' className="text-darky-600 px-4 hover:text-darky-400 font-medium">L'entreprise</Link>
+      <Link href='/about' className="text-darky-600 px-4 hover:text-darky-400 font-medium">L'entreprise</Link>
       <Link href='/' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Carrière</Link>
       <Link href='/contact' className=" text-darky-600 px-4 hover:text-darky-400 font-medium">Nous joindre</Link>
     </nav>
-    <nav className={isOpen ? "absolute md:hidden z-50 bottom-0 top-6 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full" : "hidden"}>
-    <ul className="flex flex-col w-full h-full items-between justify-center py-12 mt-18">
-      <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
-    <Link href='/services' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Nos services</Link>
+    <nav className={isOpen ? "absolute md:hidden z-30 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full transition-opacity delay-100 opacity-1 ease-in-out " : "hidden opacity-0"}>
+    <ul className="flex flex-col w-full h-full items-around justify-center h-auto">
+      <li className="p-8 bg-darky-800 border-b border-b-1 border-darky-700">
+    <Link href='/services' className="text-darky-100 hover:text-darky-500 font-medium">Nos services</Link>
     </li>
-    <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
-    <Link href='/' className="p-4 text-darky-300 hover:text-darky-100 font-medium">L'entreprise</Link>
+    <li className="p-8  bg-darky-800 border-b border-b-1 border-darky-700">
+    <Link href='/about' className="text-darky-100 hover:text-darky-500 font-medium">L'entreprise</Link>
     </li>
-    <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900">
-    <Link href='/' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Carrière</Link>
+    <li className="p-8  bg-darky-800 border-b border-b-1 border-darky-700">
+    <Link href='/' className=" text-darky-100 hover:text-darky-500 font-medium">Carrière</Link>
     </li>
-    <li className="py-10 pl-6 bg-darky-800 border-b border-b-1 border-darky-900 drop-shadow-sm">
-    <Link href='/contact' className="p-4 text-darky-300 hover:text-darky-100 font-medium">Nous joindre</Link>
+    <li className="p-8  bg-darky-800 border-b border-b-1 border-darky-700 drop-shadow-sm">
+    <Link href='/contact' className="text-darky-100 hover:text-darky-500 font-medium">Nous joindre</Link>
     </li>
     </ul>
   </nav>

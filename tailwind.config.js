@@ -98,7 +98,7 @@ module.exports = {
          lineHeight: '20px'
         }],
         'base': ['16px', {
-          lineHeight: '24px',
+          lineHeight: '32px',
           fontWeight: '600',
         }],
         'md': [ '20px', {
