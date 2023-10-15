@@ -48,7 +48,7 @@ export default function Footer(){
                     <input
                       type="text"
                       id="nom"
-                      placeholder="Nom"
+                      placeHolder="Nom"
                       className="w-full border-none font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-100 focus:ring-transparent text-sm"
                     />
                   </div>
@@ -58,7 +58,7 @@ export default function Footer(){
                     <input
                       type="email"
                       id="email"
-                      placeholder="john@rhcp.com"
+                      placeHolder="john@rhcp.com"
                       className="w-full border-none font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-100 focus:ring-transparent text-sm"
                     />
                   </div>
@@ -69,7 +69,7 @@ export default function Footer(){
                     <textarea
                       id="message"
                       name="message"
-                      placeholder="Entrez votre message"
+                      placeHolder="Entrez votre message"
                       className="w-full border-none rounded-md md:text-base px-2 py-2 focus:border-transparent focus:ring-transparent text-sm"
                     ></textarea>
                   </div>

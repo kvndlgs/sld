@@ -1,26 +1,11 @@
 "use client"
-import {usePathname, useParams} from 'next/navigation'
-import ChangeLocale from '@/components/change-locale/ChangeLocale'
-import {useTranslation} from '@/i18n/client'
-// import { LocaleTypes } from '@/i18n/settings'
+
 import Link from 'next/link'
 import * as Icon from 'react-icons/lu'
 import * as React from 'react';
 
-
-
-function NavItem({path, label}){
-  return (
-      <Link href={path} className="text-darky-600 px-4 hover:text-darky-400 font-medium"> { label } </Link>
-  )
-}
-
-
 export default function Nav(){
-  const pathName = usePathname();
-  const { locale } = useParams() || {};
-  const {t} = useTranslation(locale, 'common');
-  
+    const [isOpen, setIsopen] = React.useState(false)
     return (
 <header className="bg-white text-darky-800 drop-shadow-md h-auto">
   <div className="container mx-auto flex-row flex-nowrap md:flex-wrap p-5 flex items-center md:space-between">
@@ -47,43 +32,29 @@ export default function Nav(){
     </g>
   </svg>
     </Link>
-
     <div className="hover:cursor-pointer md:hidden absolute top-4 right-6 p-4 bg-transparent flex items-center self-end justify-center z-50" onClick={(e) => setIsopen(!isOpen)}>
       <Icon.LuMenu size="26" className="text-darky-400" />
     </div>
-
-
     <nav className="md:ml-auto lg:pl-8 md:pl-0 border-darky md:mr-auto md:flex flex-wrap items-center justify-center hidden">
-      <NavItem path={`/$locale`}
-       label={`${t('Nos services')}`} />
-      <NavItem path={`/$locale`} label={`$t("L'entreprise")`} />
-      <NavItem path={`/$locale`} label={`$t("Carrières")`} />
-      <NavItem path={`/$locale`} label={`$t("Nous joindre")`} />
-      {/** 
-      <Link href='/services' className="text-darky-600 px-4 hover:text-darky-400 font-medium"> Nos services </Link>
+      <Link href='/services' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Nos services</Link>
       <Link href='/about' className="text-darky-600 px-4 hover:text-darky-400 font-medium">L'entreprise</Link>
       <Link href='/' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Carrière</Link>
       <Link href='/contact' className=" text-darky-600 px-4 hover:text-darky-400 font-medium">Nous joindre</Link>
-    */}
-      <div className="m-w-xl flex items-end">
-      <button className="text-darky-600 px-4 hover:text-darky-400 font-medium" onClick={() => setIsEnglish(!isEnglish)}>{ isEnglish ? 'Fr' : 'En'}</button>
-     </div>
     </nav>
     <nav className={isOpen ? "absolute md:hidden z-30 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full transition-opacity delay-100 opacity-1 ease-in-out " : "hidden opacity-0"}>
     <ul className="flex flex-col w-full h-full items-around justify-center h-auto">
       <li className="p-8 bg-darky-800 border-b border-b-1 border-darky-700">
-    <Link href='/services' className="text-darky-100 hover:text-darky-500 font-medium">{NavLinks.fr[1].path}</Link>
+    <Link href='/services' className="text-darky-100 hover:text-darky-500 font-medium">Nos services</Link>
     </li>
     <li className="p-8  bg-darky-800 border-b border-b-1 border-darky-700">
-    <Link href='/about' className="text-darky-100 hover:text-darky-500 font-medium">{NavLinks.fr[2].path}</Link>
+    <Link href='/about' className="text-darky-100 hover:text-darky-500 font-medium">L'entreprise</Link>
     </li>
     <li className="p-8  bg-darky-800 border-b border-b-1 border-darky-700">
-    <Link href='/' className=" text-darky-100 hover:text-darky-500 font-medium">{NavLinks.fr[3].path}</Link>
+    <Link href='/' className=" text-darky-100 hover:text-darky-500 font-medium">Carrière</Link>
     </li>
     <li className="p-8  bg-darky-800 border-b border-b-1 border-darky-700 drop-shadow-sm">
-    <Link href='/contact' className="text-darky-100 hover:text-darky-500 font-medium">{NavLinks.fr[4].path}</Link>
+    <Link href='/contact' className="text-darky-100 hover:text-darky-500 font-medium">Nous joindre</Link>
     </li>
-    
     </ul>
   </nav>
     <Link 
@@ -93,7 +64,6 @@ export default function Nav(){
       Soumission rapide
     </Link>
   </div>
-  <ChangeLocale />
 </header>
     )
 }

@@ -3,11 +3,13 @@ import Wrapper from '@/components/wrapper/Wrapper'
 import Image from 'next/image'
 import * as Icon from 'react-icons/lu'
 
+
+
 const TeamCard = ({name, role, image}) => {
     return (
-        <div className="flex flex-col items-center justify-between m-w-1/3 h-auto rounded-md shadow-lg bg-darky-50 p-0 border border-darky-600-3">
-            <div>
-                <Image src={image} width="350" height="350" alt={name} objectFit='fill' />
+        <div className="flex flex-col mb-6 items-center justify-between m-w-1/3 h-auto rounded-xl bg-darky-50 p-0 border-2 border-darky-100">
+            <div className="border-b-2 border-darky-100">
+                <Image src={image} width="350" height="350" alt={name} className="rounded-t-xl" />
             </div>
             <div className="w-full flex flex-col items-start px-4 py-4">
                 <h3 className="font-semibold text-md text-darky-800">{name}</h3>
@@ -21,14 +23,14 @@ export default function About(){
     return (
         <RootLayout>
             <Wrapper>
-            <div className=" py-10 md:py-16 px-16 md:px-20">
+            <div className=" py-10 md:py-16 px-10 md:px-20">
                     <div className="w-full flex flex-col items-center justify-center md:justify-around py-8 mx-auto text-center">
                         <h4 className="text-md text-darky-300 font-medium pb-4"> L'entreprise </h4>
                         <h2 className="text-xl text-darky-600 font-semibold pb-8">Qui sommes-nous ?</h2>
-                        <span className="w-32 h-1 bg-primary-200 rounded-lg "></span>
+                        <span className="w-12 h-1 bg-primary-200 rounded-lg "></span>
                     </div>
                     <div>
-                        <p className="text-base font-medium md:w-3/4 mx-auto w-full py-10">
+                        <p className="text-base font-medium mx-auto md:px-24 w-full py-10">
                         Jeune mais resolument amibitieuse, notre entreprise vise a atteindre un statut de leader dans l'industrie. 
     Chez Shield Signalisation, nous nous distinguons par nos normes de recrutement rigoureuse et notre ethique de 
     travail exceptionelle. Apres avoir visité de nombreux chantiers routiers a travers le Québec, nous sommes convaincus 

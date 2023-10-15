@@ -56,6 +56,8 @@ export default function Contact(){
         return isValid;
     };
 
+    const isValidIcon = <Icon.LuLoader size="18" className="mr-2 text-primary-800" />;
+    const buttonIcon = <Icon.LuArrowRight size="18" className="mr-2 text-primary-800" />;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -161,6 +163,8 @@ export default function Contact(){
         }
     
     return (
+
+    
         <RootLayout>
         <Wrapper>
           <div className="w-full py-10 md:py-10 px-4 md:px-12">
@@ -168,7 +172,7 @@ export default function Contact(){
             <div className="w-full md:w-1/2 flex flex-col md:items-start items-center justify-around pt-6 pb-16 mx-auto">
                 <h4 className="text-md text-darky-300 font-medium pb-4"> { Content.fr.subtitle } </h4>
                 <h2 className="text-xl text-darky-700 font-semibold pb-6">{ Content.fr.title } </h2>
-                <span className="w-20 h-1 bg-primary-400"></span>
+                <span className="w-12 h-1 bg-primary-400"></span>
                 <p className='text-base font-medium mt-4 text-center md:text-left '>
                 {Content.fr.text}
                 </p>
@@ -224,5 +228,6 @@ export default function Contact(){
           </div>
         </Wrapper>
     </RootLayout>
+
     )
 }
