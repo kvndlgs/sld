@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
 
       <head>
         <Script 
+        id="gtm-script"
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "http://schema.org",
