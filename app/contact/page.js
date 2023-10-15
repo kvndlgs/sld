@@ -181,38 +181,38 @@ export default function Contact(){
             <form onSubmit={handleSubmit} className="py-2 w-full px-4">
               <div className="flex flex-col items-start justify-between pt-2 pb-3">
                 <label htmlFor="fullname" className="text-darky-400 font-medium text-base ml-2">Nom</label>
-                <input value={fullname} onChange={(e) => setFullname(e.target.value)} type="text" name="fullname" id="fullname"  placeHolder="John Doe"
+                <input value={fullname} onChange={(e) => setFullname(e.target.value)} type="text" name="fullname" id="fullname"  placeholder="John Doe"
                 className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm" 
                 />
               </div>
               <div className="w-full flex flex-row justify-between items-between">
               <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2">
                 <label htmlFor="email" className="text-darky-400 font-medium text-base ml-2">Courriel</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email"  placeHolder="johndoe@votreentreprise.ca" 
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email"  placeholder="johndoe@votreentreprise.ca" 
                 className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm" 
                 />
               </div>
               <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pl-2">
                 <label htmlFor="phone" className="text-darky-400 font-medium text-base ml-2">Téléphone</label>
-                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="phone" name="phone"  placeHolder="+1-438-526-5465" id="phone" 
+                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="phone" name="phone"  placeholder="+1-438-526-5465" id="phone" 
                 className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm" />
               </div>
               </div>
               <div className="w-full flex flex-row justify-between items-start">
               <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2">
                 <label htmlFor="company" className="text-darky-400 font-medium text-base ml-2">Entreprise</label>
-                <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" name="company"  placeHolder="Entrer le nom de l'entreprise" id="phone" 
+                <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" name="company"  placeholder="Entrer le nom de l'entreprise" id="phone" 
                 className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm"  />
               </div>
               <div className="w-full flex flex-col items-start justify-around  pt-2 pb-3 pl-2">
                 <label htmlFor="role" className="text-darky-400 font-medium text-base ml-2">Role</label>
-                <input value={role} onChange={(e) => setRole(e.target.value)} type="role" name="role" id="role" placeHolder="Votre role dans l'entreprise" 
+                <input value={role} onChange={(e) => setRole(e.target.value)} type="role" name="role" id="role" placeholder="Votre role dans l'entreprise" 
                 className="w-full py-3 px-2 text-darky bg-darky-100 rounded-sm"  />
               </div>
               </div>
               <div className="flex flex-col items-start justify-around pt-2 pb-3">
                 <label htmlFor="message" className="text-darky-400 font-medium text-base ml-2">Message</label>
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)}  name="message" id="message" placeHolder="Entrez les détails" 
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)}  name="message" id="message" placeholder="Entrez les détails" 
                 className="w-full pt-3 pb-10 px-2 text-darky bg-darky-100 rounded-sm"></textarea>
               </div>
               <div className="flex flex-col items-start justify-around pt-2 pb-3">
