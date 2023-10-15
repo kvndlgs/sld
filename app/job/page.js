@@ -26,9 +26,9 @@ export default function Job(){
     return (
         <RootLayout>
         <Wrapper>
-          <div className="w-full py-10 md:py-10 px-4 md:px-12">
+          <div className="w-full py-6 md:py-10 px-6 md:px-24">
             <div className="flex flex-col md:flex-row  items-center justify-around md:py-8 py-4 mx-auto text-center">
-            <div className="w-full md:w-1/2 flex flex-col md:items-start items-center justify-around pt-6 pb-16 mx-auto">
+            <div className="w-full md:w-1/2 flex flex-col md:items-start items-center justify-around pt-6 pb-2 md:pb-16 mx-auto">
                 <h4 className="text-md text-darky-300 font-medium pb-4"> Carrières </h4>
                 <h2 className="text-xl text-darky-700 font-semibold pb-6"> Faites le grand saut dès aujourd'hui </h2>
                 <span className="w-12 h-1 bg-primary-400"></span>

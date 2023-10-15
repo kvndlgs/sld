@@ -3,7 +3,11 @@ export default function robots() {
       rules: {
         userAgent: '*',
         allow: '/',
-        disallow: '/private/',
+        allow: '/services'
+        allow: '/services/signalisaiton',
+        allow: '/about',
+        allow: '/job',
+        allow: '/contact'
       },
       sitemap: 'https://shieldsignalisation.com/sitemap.xml',
     }

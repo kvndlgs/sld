@@ -6,7 +6,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion'
 
 const variants = {
-  open: { opacity: 1, y: 0, delay: 0.2 },
+  open: { opacity: 1, y: 0 },
   closed: { opacity: 0, y: "-100%" },
 }
 

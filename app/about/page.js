@@ -23,7 +23,7 @@ export default function About(){
     return (
         <RootLayout>
             <Wrapper>
-            <div className=" py-10 md:py-16 px-10 md:px-20">
+            <div className=" py-10 md:py-16 px-10 md:px-24">
                     <div className="w-full flex flex-col items-center justify-center md:justify-around py-8 mx-auto text-center">
                         <h4 className="text-md text-darky-500 font-md pb-4"> L'entreprise </h4>
                         <h2 className="text-xl text-darky-600 font-semibold pb-8">Qui sommes-nous ?</h2>
