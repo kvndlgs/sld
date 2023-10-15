@@ -1,0 +1,20 @@
+{
+    "links": {
+        "services": {
+            "label": "Our Services",
+            "path": "/services"
+        },
+        "about": {
+            "label": "The Company",
+            "path": "/about"
+        },
+        "job": {
+            "label": "Careers",
+            "path": "/job"
+        },
+        "contact": {
+            "label": "Get In Touch",
+            "path": "/contact"
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import HeroImage from '@/public/images/hero-truck.png'
 
 const Content = {
     "fr": {
@@ -16,10 +17,10 @@ const Content = {
 
 export default function Hero(){
     return (
-        <div className="w-full md:px-16 px-4 py-10 bg-primary">
+        <div className="w-full md:px-16 px-4 py-10 bg-primary-300">
             <div className="md:flex-row flex items-center justify-between flex-col w-full">
                 <div className="w-full md:w-1/2 md:p-5 p-2">
-                    <Image src='/images/hero-truck.png' width={3000} height={2337} objectFit='fill' alt='truck' />
+                    <Image src={HeroImage} objectFit='cover' className="px-4" alt='Shield signalisation hero truck' priority />
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col items-start justify-center md:p-5 p-2">
                     <h2 className="md:text-1xl text-xl font-semibold text-primary-800 pb-2"> La sécurité de vos chantiers entre de bonnes mains </h2>

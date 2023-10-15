@@ -1,7 +1,5 @@
 
-import React, {useEffect} from 'react';
 import Script from 'next/script';
-const facebookAppId = "118775154651491";
 
 
 export default function CustomerChat(){

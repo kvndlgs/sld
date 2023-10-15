@@ -1,0 +1,166 @@
+{
+    "links": {
+        "services": [
+            {
+                "locale": "FR_CA",
+                "label": "Nos services",
+                "path": "/services"
+            },
+            {
+                "local": "EN_CA",
+                "label": "Our Services",
+                "path": "/services"
+            }
+        ],
+        "about": [
+            {
+                "locale": "FR_CA",
+                "label": "L'entreprise",
+                "path": "/about"
+            },
+            {
+                "locale": "EN_CA",
+                "label": "The Company",
+                "path": "/about"
+            }
+        ],
+        "job": [
+            {
+                "locale": "FR_CA",
+                "label": "Carrière",
+                "path": "/job"
+            },
+            {
+                "locale": "EN_CA",
+                "label": "Career",
+                "path": "/job"
+            }
+        ],
+        "contact": [
+            {
+                "locale": "FR_CA",
+                "label": "Nous joindre",
+                "path": "/contact"
+            },
+            {
+                "locale": "EN_CA",
+                "label": "Get In Touch",
+                "path": "/contact"
+            }
+        ]
+    },
+    "titles": {
+        "home": [
+            {
+                "locale": "FR_CA",
+                "title": "La sécurité de vos chantiers entre de bonnes mains"
+            },
+            {
+                "locale": "EN_CA",
+                "title": "Your Traffic Control Needs In Goood Hands"
+            }
+        ],
+        "services": [
+            {
+                "locale": "FR_CA",
+                "title": "Nous misons sur la qualité de nos services, la rapidité d’exécution et la communication"
+            },
+            {
+                "locale": "EN_CA",
+                "title": "We Are All About Service Quality, Response Time And Communication"
+            }
+        ],
+        "about": [
+            {
+                "locale": "FR_CA",
+                "title": "À propos"
+            },
+            {
+                "locale": "EN_CA",
+                "title": "About"
+            }
+        ],
+        "whyus": [
+            {
+                "locale": "FR_CA",
+                "title": "Votre sécurité est notre priorité absolue",
+            },
+            {
+                "locale": "EN_CA",
+                "title": "Your Safety Is Our Top Priority"
+            }
+        ],
+        "service-area": [
+            {
+                "locale": "FR_CA",
+                "title": "Nos services sont disponible a travers la province de quebec"
+            },
+            {
+                "locale": "EN_CA",
+                "title": "Our services are available throughout the province of quebec"
+            }
+        ],
+        "contact": [
+            {
+                "locale": "FR_CA",
+                "title": "Faites-nous part de vos projets"
+            },
+            {
+                "locale": "EN_CA",
+                "title": "Let Us Know About Your Projects"
+            }
+        ]
+    },
+    "subtitles": {
+        "home": [
+            {
+                "locale": "FR_CA",
+                "subtitle": "Chaques chantiers est unique et nos equipes mettrons en place une solution adapter a vos besoins."
+            },
+            {
+                "locale": "EN_CA",
+                "title": "Every sites have its own needs and our teams will craft adapted solutions that fits your needs"
+            }
+        ],
+        "services": [
+            {
+                "locale": "FR_CA",
+                "subtitle": "Nos services"
+            },
+            {
+                "locale": "EN_CA",
+                "subtitle": "Our Services"
+            }
+        ],
+        "about": [
+            {
+                "locale": "FR_CA",
+                "subtitle": "Qui somme-nous ?"
+            },
+            {
+                "locale": "EN_CA",
+                "subtitle": "Who Are We ?"
+            }
+        ],
+        "whyus": [
+            {
+                "locale": "FR_CA",
+                "subtitle": "Pourquoi nous ?"
+            },
+            {
+                "locale": "EN_CA",
+                "subtitle": "Why Us ?"
+            }
+        ],
+        "contact": [
+            {
+                "locale": "FR_CA",
+                "subtitle": "Nous joindre"
+            },
+            {
+                "locale": "EN_CA",
+                "subtitle": "Get In Touch"
+            }
+        ]
+    }
+}

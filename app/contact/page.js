@@ -56,8 +56,6 @@ export default function Contact(){
         return isValid;
     };
 
-    const isValidIcon = <Icon.LuLoader size="18" className="mr-2 text-primary-800" />;
-    const buttonIcon = <Icon.LuArrowRight size="18" className="mr-2 text-primary-800" />;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
