@@ -1,8 +1,10 @@
+'use client'
 import RootLayout from '@/app/layout';
 import Wrapper from '@/components/wrapper/Wrapper'
 import Image from 'next/image';
 import Link from 'next/link';
 import * as Icon from 'react-icons/lu'
+
 
 
 
@@ -41,6 +43,7 @@ function FeatureItem({img, title, description}) {
 }
 
 export default function Services(){
+
     return (
 
         <RootLayout>
@@ -89,7 +92,7 @@ export default function Services(){
                     </div>
                     <div className="flex flex-col md:flex-row items-center justify-between py-12">
                     <div className=" w-full md:w-1/2 flex items-center justify-center p-4">
-                       <Image src="/images/workers.png" width="500" height="500" alt="yo" />
+                       <Image src="/images/workers.png" width="640" height="507" alt="Pourquoi nous ?" />
                     </div>
                     <div className="flex flex-col items-center justify-center md:w-1/2 w-full py-4 md:py-0">
                         <FeatureItem

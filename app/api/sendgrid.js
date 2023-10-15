@@ -1,15 +1,14 @@
 import sendgrid from '@sendgrid/mail'
-
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+sendgrid.setApiKey(process.sendgrid.env.SENDGRID_API_KEY)
 
 async function sendEmail(req, res) {
     try {
         await sendgrid.send({
-            to: "info@shieldsignalisation.com",
+            to: "kvndesloges@gmail.com",
             from : "info@shieldsignalisation.com",
             subject: "Nouveau message",
-            html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-            <html lang="fr">
+            html: `
+            <html>
             <head>
               <meta charset="utf-8">
             

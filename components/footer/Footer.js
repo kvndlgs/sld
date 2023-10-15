@@ -1,12 +1,13 @@
 import Link from 'next/link'
+import * as Icon from 'react-icons/lu'
 
 export default function Footer(){
     return (
-        <footer className="bg-darky">
+        <footer className="bg-darky  border-t-4 border-darky-400">
         <div className="container mx-auto w-fill p-5 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2">
             <div
-              className="border-b border-darky-700 py-8 lg:order-last lg:border-b-0 lg:border-s lg:py-16 lg:ps-16"
+              className="border-b border-darky-700 py-6 lg:order-last lg:border-b-0 lg:border-s lg:py-16 lg:ps-16"
             >
               <div className="block text-white lg:hidden">
                 <svg
@@ -35,46 +36,54 @@ export default function Footer(){
               </div>
   
               <div className="mt-4 space-y-4 lg:mt-0">
-                <span className="hidden h-1 w-10 rounded bg-primary lg:block"></span>
+
   
-                <div>
-                  <h2 className="text-lg font-semibold text-darky-400">Soumission rapide</h2>
+                <div className='flex flex-col items-start'>
+                  <h2 className="text-md font-medium text-darky-200 pb-4">Soumission rapide</h2>
+                  <span className='w-12 h-1 bg-primary-300 rounded-lg'></span>
                 </div>
   
                 <form className="mt-4 w-full">
              
                   <div className="flex-col pb-2">
-                    <label htmlFor="nom" className="text-darky-300 pb-2">Nom complet</label>
+                    <label htmlFor="nom" className="text-darky-200 pb-3 font-medium text-base">Nom</label>
                     <input
+                      required
+                      autoComplete='new-password'
                       type="text"
                       id="nom"
-                      placeHolder="Nom"
-                      className="w-full border-none font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-100 focus:ring-transparent text-sm"
+                      placeholder="Votre nom"
+                      className="outline-none w-full border-none placeholder-darky-400 font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-50 ring-non border-none text-base"
                     />
                   </div>
                   <div
                     className="flex-col pb-2" >
-                    <label htmlFor="email" className="text-darky-300 pb-32 font-medium text-base">Courriel</label>
+                    <label htmlFor="email" className="text-darky-200 pb-3 font-medium text-base">Courriel</label>
                     <input
+                    required
+                      placeholder='Votre courriel'
+                      autoComplete='new-password'
                       type="email"
                       id="email"
-                      placeHolder="john@rhcp.com"
-                      className="w-full border-none font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-100 focus:ring-transparent text-sm"
+                      placeholderder="john@rhcp.com"
+                      className="outline-none w-full border-none placeholder-darky-400 font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-50 ring-non border-none text-base"
                     />
                   </div>
                 
                     <div
                     className="flex-col pb-2" >
-                    <label htmlFor="message" className="text-white pb-32 font-nrml">Details</label>
+                    <label htmlFor="message" className="text-darky-200 pb-3 font-medium text-base">Message</label>
                     <textarea
+                     required
+                     placeholder='Votre message'
                       id="message"
                       name="message"
-                      placeHolder="Entrez votre message"
-                      className="w-full border-none rounded-md md:text-base px-2 py-2 focus:border-transparent focus:ring-transparent text-sm"
+                      placeholderder="Entrez votre message"
+                      className="outline-none w-full border-none placeholder-darky-400 font-medium rounded-md px-2 pt-3 pb-6 md:text-base focus:bg-darky-50 ring-non border-none text-base"
                     ></textarea>
                   </div>
-                  <button type="submit" className="bg-primary font-semibold text-primary-900 mt-2 px-4 py-3 rounded-md w-full">
-                    Envoyer </button>
+                  <button type="submit" className="bg-primary font-semibold text-primary-800 mt-2 px-4 py-3 rounded-md w-full flex flex-row items-center justify-center hover:bg-primary-200 transition shadow-md">
+                    Envoyer <Icon.LuArrowRight size='18' className='ml-4' /> </button>
                 </form>
               </div>
             </div>

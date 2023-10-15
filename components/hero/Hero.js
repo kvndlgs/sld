@@ -11,7 +11,7 @@ export default function Hero(){
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col items-start justify-center md:p-5 p-2">
                     <h2 className="md:text-2xl text-xl font-semibold text-primary-800 pb-2"> La sécurité de vos chantiers entre de bonnes mains </h2>
-                    <p className="pb-5 font-medium text-medium text-primary-700"> Chaques chantiers est unique et nos equipes mettront en place une solution adaptée a vos besoins.</p>
+                    <p className="pb-5 font-medium text-md text-primary-700"> Chaques chantiers est unique et nos equipes mettront en place une solution adaptée a vos besoins.</p>
                     <Link href="/services" className='text-primary-800 font-semibold bg-primary-200 rounded-md drop-shadow-md py-3 px-5 hover:bg-primary-800 hover:text-primary-200 transition inline-flex items-center justify-between'> En savoir plus <Icon.LuArrowRight className="ml-2 text-md font-semibold" /></Link>
                 </div>
             </div>

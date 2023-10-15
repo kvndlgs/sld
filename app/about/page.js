@@ -13,7 +13,7 @@ const TeamCard = ({name, role, image}) => {
             </div>
             <div className="w-full flex flex-col items-start px-4 py-4">
                 <h3 className="font-semibold text-md text-darky-800">{name}</h3>
-                <p className="font-medium text-base text-darky-400">{role}</p>
+                <p className="font-md text-base text-darky-400">{role}</p>
             </div>
         </div>
     )
@@ -25,12 +25,12 @@ export default function About(){
             <Wrapper>
             <div className=" py-10 md:py-16 px-10 md:px-20">
                     <div className="w-full flex flex-col items-center justify-center md:justify-around py-8 mx-auto text-center">
-                        <h4 className="text-md text-darky-300 font-medium pb-4"> L'entreprise </h4>
+                        <h4 className="text-md text-darky-500 font-md pb-4"> L'entreprise </h4>
                         <h2 className="text-xl text-darky-600 font-semibold pb-8">Qui sommes-nous ?</h2>
                         <span className="w-12 h-1 bg-primary-200 rounded-lg "></span>
                     </div>
                     <div>
-                        <p className="text-base font-medium mx-auto md:px-24 w-full py-10">
+                        <p className="font-base font-md text-darky mx-auto md:px-24 w-full pt-2 pb-6">
                         Jeune mais resolument amibitieuse, notre entreprise vise a atteindre un statut de leader dans l'industrie. 
     Chez Shield Signalisation, nous nous distinguons par nos normes de recrutement rigoureuse et notre ethique de 
     travail exceptionelle. Apres avoir visité de nombreux chantiers routiers a travers le Québec, nous sommes convaincus 
@@ -39,7 +39,7 @@ export default function About(){
                         </p>
                     </div>
                     <div className='flex inline-flex items-center justify-center w-full py-5'>
-                        <h4 className="text-md text-darky-300 font-medium pb-4">  L'équipe </h4>
+                        <h4 className="text-md text-darky-500 font-md pb-4">  L'équipe </h4>
                         </div>
                     <div className="flex flex-wrap items-around justify-around pt-8">
                        <TeamCard
