@@ -45,17 +45,17 @@ export default function About(){
                        <TeamCard
                          name="Sebastien Côté"
                          role="Président"
-                         image="/images/user.png"
+                         image="/images/user.jpg"
                         />
                         <TeamCard
                          name="Ken Lamoureux"
                          role="Vice-président"
-                         image="/images/user.png"
+                         image="/images/user.jpg"
                         />
                                                <TeamCard
                          name="Kevin Desloges"
                          role="Vice-président"
-                         image="/images/user.png"
+                         image="/images/user.jpg"
                         />
                     </div>
                 </div>
