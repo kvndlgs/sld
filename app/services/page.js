@@ -144,9 +144,9 @@ export default function Services(){
                     />
                     <div className="flex flex-col md:flex-row items-center justify-between py-6 md:px-20 px-6">
                     <div className="md:w-1/2 w-full flex flex-col justify-center w-full items-start py-2 md:py-6">
-                           <h2 className="font-bold text-lg text-primary-700 md:w-[90%] md:-mt-20 pb-4">Travailler en toute confiance, et ce, partout au Québec.</h2>
-                           <p className="pb-6 text-base mt-2 text-primary-700 font-medium"> Contacter nous par téléphone au <a className="text-darky-700" href="callto:4385265465"> 438-526-5465</a>, par courriel a l'adresse <a className="text-darky-700" href="mailto:info@shieldsignalisation.com">info@shieldsignalisation.com</a> ou encore, clavardez en direct pour plus d'information sur la disponibilté de nos équipes dans votre region.</p>
-                           <Link className="bg-primary-200 text-primary-800 font-semibold py-3 px-4 shadow-md rounded-md" href="/contact"> En savoir plus </Link>
+                           <h2 className="font-bold text-lg text-secondary-700 md:w-[90%] md:-mt-20 pb-4">Travailler en toute confiance, et ce, partout au Québec.</h2>
+                           <p className="pb-6 text-base mt-2 text-secondary-700 font-medium"> Contacter nous par téléphone au <a className="text-secondary-50" href="callto:4385265465"> 438-526-5465</a>, par courriel a l'adresse <a className="text-secondary-50" href="mailto:info@shieldsignalisation.com">info@shieldsignalisation.com</a> ou encore, clavardez en direct pour plus d'information sur la disponibilté de nos équipes dans votre region.</p>
+                           <Link className="bg-secondary-200 text-secondary-800 font-semibold py-3 px-4 shadow-md rounded-md" href="/contact"> En savoir plus </Link>
                         </div>
                         <div data-aos='flip-up' data-aos-easing='ease-in' data-aos-duration='500' className="md:w-1/2 w-full flex items-center justify-center md:mt-0 mt-10">
                             <Image src="/images/map.png" width="1300" height="1300" alt="zone desservies" />
