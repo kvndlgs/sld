@@ -63,9 +63,13 @@ export default function RootLayout({ children }) {
               <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
               <meta name="canonical" content="https://shieldsignalisation.com/" />
               <meta name="description" content="Entreprise de signalisation routière. Basé à Saint-Jérôme. Nous offrons nos services partout au Québec."/>
-              <meta name="og.image" content="/images/og-image.png"/>
               <meta name="locale" content="fr_CA"/>
-              <title> Shield signalisation | Site officielle </title>
+              <meta property="og:url" content="https://shieldsignalisation.com" />
+              <meta property="og:image" content="/images/og-image.png"/>
+              <meta property="og:type" content="website"/>
+              <meta property="og:title" content="Shield signalisation Inc."/>
+              <meta property="og:description" content="Entreprise de signalisation routière offrant ses services à la grandeur du Québec."/>
+              <title> Shield signalisation Inc.</title>
     </head>
     
     <GoogleAnalytics />
