@@ -111,13 +111,13 @@ export default function Contact(){
       
         <RootLayout>
         <Wrapper>
-          <div className="w-full py-10 md:py-10 px-4 md:px-12">
-            <div className="flex flex-col md:flex-row  items-center justify-around md:py-8 py-4 mx-auto text-center">
-            <div className="w-full md:w-1/2 flex flex-col md:items-start items-center justify-around pt-6 pb-16 mx-auto">
-                <h4 className="text-md text-darky-300 font-medium pb-4"> Nous joindre </h4>
-                <h2 className="text-xl text-darky-700 font-semibold pb-6">Faites-nous part de vos projets </h2>
-                <span className="w-12 h-1 bg-primary-400"></span>
-                <p className='text-base font-medium mt-4 text-center md:text-left '>
+          <div className="w-full py-10 md:py-10 px-6 md:px-20">
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-around md:py-8 py-4 mx-auto text-center px-6 md:px-20">
+            <div className="w-full md:w-1/2 flex flex-col md:items-start md:mt-20 items-center justify-around pt-6 mx-auto">
+                <h4 className="text-md text-darky-400 font-medium pb-4"> Nous joindre </h4>
+                <h2 className="md:text-xl text-md text-darky-800 font-semibold pb-3">Faites-nous part de vos projets </h2>
+                <span className="w-10 h-1 bg-primary-400"></span>
+                <p className='text-base font-medium text-darky-600 mt-8 text-center md:text-left'>
                 Notre équipe se fera un plaisir de vous aider a mettre en place une solution adapté a tout vos besoins en matière de signalisation routières.
                 </p>
             </div>

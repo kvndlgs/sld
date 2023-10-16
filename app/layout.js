@@ -1,3 +1,4 @@
+'use client'
 
 import './globals.css'
 import { Montserrat } from 'next/font/google'
@@ -5,6 +6,8 @@ import { Montserrat } from 'next/font/google'
 import Fb from '@/components/messenger/Fb'
 import GoogleAnalytics from '@/components/google/GoogleAnalytics';
 import Script from 'next/script'
+import AOS from 'aos';
+import * as React from 'react';
 
 
 const montserrat = Montserrat({
@@ -14,12 +17,14 @@ const montserrat = Montserrat({
 });
 
 
-
-
 export default function RootLayout({ children }) {
+  React.useEffect(() => {
+    AOS.init({
+      
+    }, [])
+  })
   return (
     <html lang="fr">
-
       <head>
         <Script 
         id="gtm-script"
@@ -47,7 +52,8 @@ export default function RootLayout({ children }) {
         })
      }}
         />
-             <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
+              <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+              <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
               <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
               <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
               <link rel="icon" type="icon" href="./favicon.ico"/>
@@ -55,7 +61,7 @@ export default function RootLayout({ children }) {
               <meta name="msapplication-TileColor" content="#ffffff"/>
               <meta name="theme-color" content="#ffffff"/>
               <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-              <meta name="canonical" content="https://shieldsignalisation.com" />
+              <meta name="canonical" content="https://shieldsignalisation.com/" />
               <meta name="description" content="Entreprise de signalisation routière. Basé à Saint-Jérôme. Nous offrons nos services partout au Québec."/>
               <meta name="og.image" content="/images/og-image.png"/>
               <meta name="locale" content="fr_CA"/>
@@ -65,6 +71,7 @@ export default function RootLayout({ children }) {
     <GoogleAnalytics />
                   <body className={montserrat.className}>
                     {children}
+                    <Fb />
                   </body>
                 </html>
                 )

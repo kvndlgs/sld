@@ -3,12 +3,7 @@
 import Link from 'next/link'
 import * as Icon from 'react-icons/lu'
 import * as React from 'react';
-import { motion } from 'framer-motion'
 
-const variants = {
-  open: { opacity: 1, y: 0 },
-  closed: { opacity: 0, y: "-100%" },
-}
 
 export default function Nav(){
     const [isOpen, setIsopen] = React.useState(false)
@@ -48,7 +43,7 @@ export default function Nav(){
       <Link href='/contact' className=" text-darky-600 px-4 hover:text-darky-400 font-medium">Nous joindre</Link>
     </nav>
     
-    <motion.nav animate={isOpen ? "open" : "closed"} variants={variants} className={isOpen ? "absolute md:hidden z-30 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full transition-opacity delay-100 opacity-1 ease-in-out " : "hidden opacity-0"}>
+    <nav animate={isOpen ? "open" : "closed"}  className={isOpen ? "absolute md:hidden z-30 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full transition-opacity delay-100 opacity-1 ease-in-out " : "hidden opacity-0"}>
     <ul className="flex flex-col w-full h-full items-around justify-center h-auto">
       <li className="p-8 bg-darky-800 border-b border-b-1 border-darky-700">
     <Link href='/services' className="text-darky-100 hover:text-darky-500 font-medium">Nos services</Link>
@@ -63,7 +58,7 @@ export default function Nav(){
     <Link href='/contact' className="text-darky-100 hover:text-darky-500 font-medium">Nous joindre</Link>
     </li>
     </ul>
-  </motion.nav>
+  </nav>
     <Link 
     href='/contact' 
     className="md:inline-flex font-semibold hidden items-center bg-primary shadow-sm text-primary-900 border-0  

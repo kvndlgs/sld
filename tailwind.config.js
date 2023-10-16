@@ -94,31 +94,31 @@ module.exports = {
         
       },
       fontSize: {
-        'sm': ['12px', {
-         lineHeight: '20px'
+        'sm': ['12.80px', {
+         lineHeight: '20px',
         }],
-        'base': ['16px', {
-          lineHeight: '32px',
+        'base': ['17.20px', {
+          lineHeight: '1.4',
         }],
         'md': [ '20px', {
-          lineHeight: '24px',
+          lineHeight: '1.3',
         }],
-        'lg': [ '28px', {
-          lineHeight: '32px',
+        'lg': [ '25px', {
+          lineHeight: '1.3',
         }],
-        'xl': [ '32px',{
-          lineHeight: '40px',
+        'xl': [ '31.25px',{
+          lineHeight: '1.3',
         }],
-        '2xl': ['40px', {
-          lineHeight: '48px',
+        '2xl': ['39.06px', {
+          lineHeight: '1.3',
         }],
-        '3xl': [ '48px', {
-          lineHeight: '56px',
+        '3xl': [ '48.83px', {
+          lineHeight: '1.3',
         }],
-        '4xl': [ '56px', {
-          lineHeight: '64px',
+        '4xl': [ '61.29px', {
+          lineHeight: '1.3',
         }],
-        '5xl': [ '64px', {
+        '5xl': [ '76.29px', {
           lineHeight: '72px',
         }],
       },
