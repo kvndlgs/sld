@@ -22,14 +22,15 @@ const TeamCard = ({name, role, image}) => {
 export default function About(){
     return (
         <RootLayout>
+            <suspense fallback={<p>loading..</p>}>
             <Wrapper>
-            <div className=" py-12 md:py-16 px-10 md:px-20 bg-darky-300">
+            <div className=" py-12 md:py-16 px-10 md:px-20 bg-darky-500">
                 <PageTitle
                  subtitle="L'entreprise "
                  title="Qui sommes-nous ?"
                  titleColor="text-darky-50"
                  subtitleColor="text-darky-100"
-                 spanColor="bg-darky-600"
+                 spanColor="bg-darky-300"
                 />
                     <div>
                         <p className="font-base font-md text-darky-50 text-align-left mx-auto md:px-20 px-6 md:mt-8 md:mb-12 w-full pt-2 pb-6">
@@ -43,10 +44,10 @@ export default function About(){
                     <div className='flex inline-flex items-center justify-center w-full py-8 md:py-14'>
                         <PageTitle
                          subtitle="L'équipe"
-                         title="Membre éxecutifs"
+                         title="Personnel éxécutifs"
                          titleColor='text-darky-50'
                          subtitleColor='text-darky-100'
-                         spanColor='bg-darky-600'
+                         spanColor='bg-darky-300'
                          aosData='flip-up'
                          aosDataDuration='400'
                          aosDataEasing='ease-in'
@@ -72,6 +73,7 @@ export default function About(){
                 </div>
     
             </Wrapper>
+     </suspense>
         </RootLayout>
     )
 }

@@ -36,11 +36,11 @@ export default function Nav(){
     <div className="hover:cursor-pointer md:hidden absolute top-4 right-6 p-4 bg-transparent flex items-center self-end justify-center z-50" onClick={(e) => setIsopen(!isOpen)}>
       <Icon.LuMenu size="26" className="text-darky-400" />
     </div>
-    <nav className="md:ml-auto lg:pl-8 md:pl-0 border-darky md:mr-auto md:flex flex-wrap items-center justify-center hidden">
-      <Link href='/services' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Nos services</Link>
-      <Link href='/about' className="text-darky-600 px-4 hover:text-darky-400 font-medium">L'entreprise</Link>
-      <Link href='/job' className="text-darky-600 px-4 hover:text-darky-400 font-medium">Carrières</Link>
-      <Link href='/contact' className=" text-darky-600 px-4 hover:text-darky-400 font-medium">Nous joindre</Link>
+    <nav className="md:ml-auto lg:pl-8 md:pl-0 border-darky md:mx-auto md:flex flex-wrap items-center justify-center hidden">
+      <Link href='/services' className="text-darky-700 px-6 hover:text-darky-400 font-medium">Nos services</Link>
+      <Link href='/about' className="text-darky-700 px-6 hover:text-darky-400 font-medium">L'entreprise</Link>
+      <Link href='/job' className="text-darky-700 px-6 hover:text-darky-400 font-medium">Carrières</Link>
+      <Link href='/contact' className=" text-darky-700 px-6 hover:text-darky-400 font-medium">Nous joindre</Link>
     </nav>
     
     <nav animate={isOpen ? "open" : "closed"}  className={isOpen ? "absolute md:hidden z-30 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full transition-opacity delay-100 opacity-1 ease-in-out " : "hidden opacity-0"}>
@@ -61,9 +61,9 @@ export default function Nav(){
   </nav>
     <Link 
     href='/contact' 
-    className="md:inline-flex font-semibold hidden items-center bg-primary shadow-sm text-primary-900 border-0  
-    px-4 py-3 focus:outline-none hover:bg-primary-500 rounded-md mt-4 md:mt-0">
-      Soumission rapide
+    className="md:inline-flex font-semibold hidden items-center bg-primary shadow-md text-primary-800 border-0  
+    px-4 py-3 focus:outline-none hover:bg-primary-300 rounded-md transition mt-4 md:mt-0">
+      Soumission gratuite
     </Link>
   </div>
 </header>

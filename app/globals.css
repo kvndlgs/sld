@@ -8,11 +8,11 @@ html {
 
 svg#logo #bg {
     transition: fill cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
-    fill: #2b353b;
+    fill: #3A4349;
 }
 
 svg#logo #letters path {
-    transition: fill cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: fill cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
     fill: #fff;
 }
 
@@ -21,6 +21,6 @@ svg#logo:hover #bg {
 }
 
 svg#logo:hover #letters path {
-    fill: #2b353b;
+    fill: #3A4349;
 }
 

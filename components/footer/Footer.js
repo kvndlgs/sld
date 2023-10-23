@@ -13,7 +13,7 @@ export default function Footer(){
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlSpace="preserve"
-                  width='70px'
+                  width='60px'
                   x={0}
                   y={0}
                   enableBackground="new 123-184.1 504 541"
@@ -24,7 +24,7 @@ export default function Footer(){
                     d="M374.8 343.8c-83.2-26.5-154.5-79.5-204.1-148.9-23.3-32.7-35.7-71.9-35.7-112V-92.3c66.8-50.1 149.8-79.8 239.8-79.8s173 29.7 239.8 79.8V82.9c0 40.1-12.4 79.3-35.7 111.9-49.7 69.6-121 122.5-204.1 149z"
   
                   
-                    fill="#2b353b"
+                    fill="#3A4349"
                   />
                   <g id="letters">
                     <path
@@ -93,7 +93,7 @@ export default function Footer(){
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlSpace="preserve"
-                  width='70px'
+                  width='60px'
                   x={0}
                   y={0}
                   enableBackground="new 123-184.1 504 541"
@@ -103,7 +103,7 @@ export default function Footer(){
                     id="bg"
                     d="M374.8 343.8c-83.2-26.5-154.5-79.5-204.1-148.9-23.3-32.7-35.7-71.9-35.7-112V-92.3c66.8-50.1 149.8-79.8 239.8-79.8s173 29.7 239.8 79.8V82.9c0 40.1-12.4 79.3-35.7 111.9-49.7 69.6-121 122.5-204.1 149z"
   
-                    fill="#2b353b"
+                    fill="#3A4349"
                   />
                   <g id="letters">
                     <path

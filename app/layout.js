@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
     <GoogleAnalytics />
                   <body className={montserrat.className}>
                     {children}
-                    <Fb />
+
                   </body>
                 </html>
                 )
