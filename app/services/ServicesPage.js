@@ -1,6 +1,5 @@
 'use client'
-import RootLayout from '@/app/layout';
-import Wrapper from '@/components/wrapper/Wrapper'
+
 import Image from 'next/image';
 import Link from 'next/link';
 import * as Icon from 'react-icons/lu'
@@ -30,11 +29,11 @@ function FeatureItem({img, title, description}) {
     return (
         <div className="py-4 self-start">
             <div className="inline-flex items-center justify-start mx-auto">
-                <div className="text-primary p-4">
+                <div className="text-primary p-4 pb-5">
                  {img}
                  </div>
-                <h3 className='font-medium text-md text-darky-700'> { title }</h3>
-                <p className='text-sm font-normal text-darky-300'>{ description}</p>
+                <h3 className='font-semibold text-md text-darky-600'> { title }</h3>
+                <p className='text-sm font-base text-darky-300'>{ description}</p>
             </div>
            
         </div>
@@ -49,8 +48,8 @@ export default function ServicesPage(){
         <>
                 <div className="py-10 md:py-12 px-6 md:px-20">
                     <PageTitle
-                      titleColor='text-darky-800'
-                      subtitleColor='text-darky-600'
+                      titleColor='text-darky-700'
+                      subtitleColor='text-darky-500'
                       title='Pour une circulation fluide et sécuritaire'
                       subtitle='Nos services'
                       spanColor='bg-primary-200'
@@ -120,7 +119,7 @@ export default function ServicesPage(){
                         />
                         <FeatureItem
                           img={<Icon.LuCloudLightning  size="32" />}
-                          title="Nous misons sur la qualité de nos services, la rapidité d’exécution et la communication." 
+                          title="Nous misons sur la qualitée de nos services, la rapidité d’exécution et la communication." 
                           description=""
                         />
                     </div>
@@ -144,7 +143,7 @@ export default function ServicesPage(){
                     <div className="flex flex-col md:flex-row items-center justify-between py-6 md:px-20 px-6">
                     <div className="md:w-1/2 w-full flex flex-col justify-center w-full items-start py-2 md:py-6">
                            <h2 className="font-bold text-lg text-secondary-800 md:w-[90%] md:-mt-20 pb-4">Travailler en toute confiance, et ce, partout au Québec.</h2>
-                           <p className="pb-6 text-base mt-2 text-secondary-700 font-medium"> Contacter nous par téléphone au <a className="text-secondary-50 font-semibold" href="callto:4385265465"> 438-526-5465</a>. par courriel a l'adresse <a className="font-semibold text-secondary-50" href="mailto:info@shieldsignalisation.com">info@shieldsignalisation.com</a> ou encore, clavardez en direct pour plus d'information sur la disponibilté de nos équipes dans votre region.</p>
+                           <p className="pb-6 text-base mt-2 text-secondary-700 font-medium"> Contacter nous par téléphone au <a className="text-secondary-50 font-semibold" href="callto:18887603504">1 888-760-3504</a>. par courriel a l'adresse <a className="font-semibold text-secondary-50" href="mailto:info@shieldsignalisation.com">info@shieldsignalisation.com</a> ou encore, clavardez en direct pour plus d'information sur la disponibilté de nos équipes dans votre region.</p>
                            <Link className="bg-secondary-100 text-secondary-800 font-semibold py-3 px-4 shadow-md rounded-md hover:bg-secondary-200" href="/contact"> En savoir plus </Link>
                         </div>
                         <div data-aos='flip-up' data-aos-easing='ease-in' data-aos-duration='500' className="md:w-1/2 w-full flex items-center justify-center md:mt-0 mt-10">

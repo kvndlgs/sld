@@ -1,5 +1,6 @@
 import Hero from '@/components/hero/Hero'
 import { ServiceItem } from '@/app/services/ServicesPage';
+import PageTitle from '@/components/page-title/PageTitle';
 
 
 
@@ -11,9 +12,13 @@ export default function HomePage() {
         {/** services */}
         <div className="bg-white py-10 md:py-16 px-16 md:px-24">
                     <div className="w-full flex flex-col items-center justify-center md:justify-around py-4 md:py-8 mx-auto text-center">
-                        <h4 className="text-md text-darky-300 font-medium pb-4"> Nos services </h4>
-                        <h2 className="text-xl text-darky-600 font-semibold pb-8">Pour une circulation fluide et sécuritaire</h2>
-                        <span className="w-12 h-1 bg-primary-200 rounded-lg "></span>
+                      <PageTitle
+                         title='Pour une circulation fluide et sécuritaire'
+                         subtitle='Nos services'
+                         subtitleColor='text-darky-400'
+                         titleColor='text-darky-700'
+                         spanColor='bg-primary-300'
+                         />
                     </div>
                     <div className="flex flex-wrap items-around justify-around md:pt-6 pt-2">
                         <ServiceItem
@@ -30,7 +35,7 @@ export default function HomePage() {
                         />
                         <ServiceItem
                           title="Location d'équipement"
-                          description="Louer nos équipements a la fine pointe de la technologie."
+                          description="Bientôt"
                           img="/images/location-icon.png"
                           link="/"
                         />

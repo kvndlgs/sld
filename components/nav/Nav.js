@@ -1,7 +1,7 @@
 "use client"
 
-import Link from 'next/link'
-import * as Icon from 'react-icons/lu'
+import Link from 'next/link';
+import * as Icon from 'react-icons/lu';
 import * as React from 'react';
 
 
@@ -34,7 +34,7 @@ export default function Nav(){
   </svg>
     </Link>
     <div className="hover:cursor-pointer md:hidden absolute top-4 right-6 p-4 bg-transparent flex items-center self-end justify-center z-50" onClick={(e) => setIsopen(!isOpen)}>
-      <Icon.LuMenu size="26" className="text-darky-400" />
+     { !isOpen ?  <Icon.LuMenu size="26" className="text-darky-400" /> : <Icon.LuX size="26" className="text-darky-400" /> }
     </div>
     <nav className="md:ml-auto lg:pl-8 md:pl-0 border-darky md:mx-auto md:flex flex-wrap items-center justify-center hidden">
       <Link href='/services' className="text-darky-700 px-6 hover:text-darky-400 font-medium">Nos services</Link>
@@ -43,7 +43,7 @@ export default function Nav(){
       <Link href='/contact' className=" text-darky-700 px-6 hover:text-darky-400 font-medium">Nous joindre</Link>
     </nav>
     
-    <nav animate={isOpen ? "open" : "closed"}  className={isOpen ? "absolute md:hidden z-30 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full transition-opacity delay-100 opacity-1 ease-in-out " : "hidden opacity-0"}>
+    <nav  className={isOpen ? "absolute md:hidden z-30 top-0 bg-darky flex flex-col items-center justify-between right-0 left-0  h-auto w-full transition-opacity delay-100 opacity-1 ease-in-out " : "hidden opacity-0"}>
     <ul className="flex flex-col w-full h-full items-around justify-center h-auto">
       <li className="p-8 bg-darky-800 border-b border-b-1 border-darky-700">
     <Link href='/services' className="text-darky-100 hover:text-darky-500 font-medium">Nos services</Link>
@@ -61,8 +61,8 @@ export default function Nav(){
   </nav>
     <Link 
     href='/contact' 
-    className="md:inline-flex font-semibold hidden items-center bg-primary shadow-md text-primary-800 border-0  
-    px-4 py-3 focus:outline-none hover:bg-primary-300 rounded-md transition mt-4 md:mt-0">
+    className="md:inline-flex font-semibold hidden items-center bg-primary shadow-md text-white
+    px-5 py-3 focus:outline-none  rounded-md transition mt-4 md:mt-0 hover:shadow-lg border border-b-4 border-primary-600">
       Soumission gratuite
     </Link>
   </div>

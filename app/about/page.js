@@ -21,8 +21,7 @@ const TeamCard = ({name, role, image}) => {
 
 export default function About(){
     return (
-        <RootLayout>
-            <suspense fallback={<p>loading..</p>}>
+        <RootLayout title="FUCK">
             <Wrapper>
             <div className=" py-12 md:py-16 px-10 md:px-20 bg-darky-500">
                 <PageTitle
@@ -34,7 +33,7 @@ export default function About(){
                 />
                     <div>
                         <p className="font-base font-md text-darky-50 text-align-left mx-auto md:px-20 px-6 md:mt-8 md:mb-12 w-full pt-2 pb-6">
-                        Jeune mais resolument amibitieuse, notre entreprise vise a atteindre un statut de leader dans l'industrie. 
+                        Jeune mais résolument amibitieuse, notre entreprise vise a atteindre un statut de leader dans l'industrie. 
     Chez Shield Signalisation, nous nous distinguons par nos normes de recrutement rigoureuse et notre ethique de 
     travail exceptionelle. La sécurité et le bien-être 
     des travailleurs routiers ainsi que des usagers de la route nous tiennent à coeur, et nous avons fait de cette priorité une seconde nature.
@@ -73,7 +72,6 @@ export default function About(){
                 </div>
     
             </Wrapper>
-     </suspense>
         </RootLayout>
     )
 }

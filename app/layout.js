@@ -10,6 +10,7 @@ import AOS from 'aos';
 import * as React from 'react';
 
 
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -35,7 +36,7 @@ export default function RootLayout({ children }) {
           "name": "Shield signalisation",
           "description": "Entreprise de signalisation routière. Basé à Saint-Jérôme. Nous offrons nos services partout au Québec.",
           "email": "mailto:info@shieldsignalisation.com",
-          "telephone": "(438)-526-5465",
+          "telephone": "+1 888-760-3504",
           "url": "http://www.shieldsignalisation.com",
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -69,13 +70,14 @@ export default function RootLayout({ children }) {
               <meta property="og:type" content="website"/>
               <meta property="og:title" content="Shield signalisation Inc."/>
               <meta property="og:description" content="Entreprise de signalisation routière offrant ses services à la grandeur du Québec."/>
-              <title> Shield signalisation Inc.</title>
+              <title> Shield Signalisation Inc. </title>
+           
     </head>
     
     <GoogleAnalytics />
                   <body className={montserrat.className}>
                     {children}
-
+                    <Fb />
                   </body>
                 </html>
                 )
