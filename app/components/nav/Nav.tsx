@@ -52,7 +52,7 @@ function NavMobile() {
                                 </g>
                             </svg>
                         </Link>
-                        <button className='text-darky-600' onClick={toggleOpen}> { isOpen ?  <Icon.LuX size='28' /> : <Icon.LuMenu size='28' /> }</button>
+                        <button  type='text' className='text-darky-600' onClick={toggleOpen}> { isOpen ?  <Icon.LuX size='28' /> : <Icon.LuMenu size='28' /> }</button>
             </div>
             <AnimatePresence mode='sync'>
 

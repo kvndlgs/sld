@@ -109,7 +109,7 @@ export default function ContactForm() {
                                 ></textarea>
                             </div>
                             <div className="flex flex-col items-start justify-around pt-2 pb-3">
-                                <Button size='md' icon='true'  label={sending ? 'Envois en cours' : 'Envoyer'} type='submit' >
+                                <Button type='text' size='md' icon='true'  label={sending ? 'Envois en cours' : 'Envoyer'} type='submit' >
                                     <Icon.LuArrowRight size='18' />
                                 </Button>
 
