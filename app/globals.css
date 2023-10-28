@@ -2,25 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
-    font: 100%;
+  font: 100%;
 }
 
 svg#logo #bg {
-    transition: fill cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
-    fill: #3A4349;
+  transition: fill cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  fill: #3A4349;
 }
 
 svg#logo #letters path {
-    transition: fill cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
-    fill: #fff;
+  transition: fill cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  fill: #fff;
 }
 
 svg#logo:hover #bg {
-    fill: #F6D13A;
+  fill: #F6D13A;
 }
 
 svg#logo:hover #letters path {
-    fill: #3A4349;
+  fill: #fff;
 }
-
