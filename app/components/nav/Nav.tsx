@@ -88,7 +88,7 @@ function NavMobile() {
 }
 
 function DesktopNav() {
-    const { scrollYProgress } = useScroll(true);
+    const { scrollYProgress } = useScroll();
     const [atPageStart, setAtPageStart] = React.useState(true);
     const [scrollingUp, setScrollingUp] = React.useState(true);
 
