@@ -100,7 +100,7 @@ function DesktopNav() {
     return (
         <header className='w-full h-auto'>
         <motion.nav 
-        className='sticky top-0 z-10 flex w-full h-18 py-4 px-12 bg-white flex items-center gap-2 justify-between drop-shadow-sm'
+        className='sticky top-0 z-10 flex w-full h-18 py-4 px-12 bg-white items-center gap-2 justify-between drop-shadow-sm'
         variants={menuVariants}
         animate={[
             atPageStart ? 'transparent' : 'solid',
@@ -143,7 +143,7 @@ function DesktopNav() {
                         <Link href="/contact" className=' text-darky-700 hover:text-darky-600'> Nous joindre </Link>
                </div>
                 <div className='hidden md:flex items-center justify-center'>
-                <Button  size='md' label='Soumission' href='/contact' icon='false'> <Icon.LuArrowRight size='16' /> </Button>
+                <Button type='text' size='md' label='Soumission' href='/contact' icon='false'> <Icon.LuArrowRight size='16' /> </Button>
                 </div>
 
 
