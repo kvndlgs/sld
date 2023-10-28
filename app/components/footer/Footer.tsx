@@ -61,11 +61,10 @@ export default function Footer(){
                     <label htmlFor="email" className="text-darky-200 pb-3 font-medium text-base">Courriel</label>
                     <input
                     required
-                      placeholder='Votre courriel'
                       autoComplete='new-password'
                       type="email"
                       id="email"
-                      placeholderder="john@rhcp.com"
+                      placeholder="john@rhcp.com"
                       className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-50 ring-non border-none text-base"
                     />
                   </div>
@@ -74,11 +73,10 @@ export default function Footer(){
                     className="flex-col pb-2" >
                     <label htmlFor="message" className="text-darky-200 pb-3 font-medium text-base">Message</label>
                     <textarea
-                     required
-                     placeholder='Votre message'
+                      required
+                      placeholder='Votre message'
                       id="message"
                       name="message"
-                      placeholderder="Entrez votre message"
                       className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 pt-3 pb-6 md:text-base focus:bg-darky-50 ring-non border-none text-base"
                     ></textarea>
                   </div>
