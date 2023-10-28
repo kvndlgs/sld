@@ -15,7 +15,7 @@ export default function Hero(){
                     <h2 className="md:text-xl text-lg font-bold text-darky-100 pb-1.5"> La sécurité de vos chantiers entre de bonnes mains </h2>
                     <p className="pb-6 text-base text-darky-50"> Chaque chantier est unique et nos équipes mettrons en place une solution adaptée a vos besoins.</p>
                    <Link href='/services'>
-                    <Button label='En savoir plus' size='md' icon='true'>
+                    <Button type='text' label='En savoir plus' size='md' icon='true'>
                          <Icon.LuArrowRight size='16' />
                     </Button>
                     </Link>
