@@ -33,6 +33,9 @@ export default function About() {
                     titleColor="text-darky-50"
                     subtitleColor="text-darky-100"
                     spanColor="bg-darky-300"
+                    aosData=''
+                    aosDataDuration=''
+                    aosDataEasing=''
                 />
                 <div>
                     <p className="font-base font-md text-darky-50 text-align-left mx-auto md:px-20 px-6 md:mt-8 md:mb-12 w-full pt-2 pb-6">
@@ -43,7 +46,7 @@ export default function About() {
                     </p>
                 </div>
 
-                <div className='flex inline-flex items-center justify-center w-full py-8 md:py-14'>
+                <div className='flex flex-row items-center justify-center w-full py-8 md:py-14'>
                     <PageTitle
                         subtitle="L'équipe"
                         title="Personnel éxécutifs"

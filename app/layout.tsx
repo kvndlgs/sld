@@ -37,7 +37,6 @@ export default function SiteLayout({
         <meta property='og:locale' content='fr_CA' />
         <meta property='og:locale:alternate' content='en_CA' />
         <Script
-         strategy='beforeInteractive'
          id='ldjson-data'
          type='application/ld+json'
          dangerouslySetInnerHTML={{
