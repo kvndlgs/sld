@@ -46,6 +46,7 @@ export default function SiteLayout({
             "@context": "http://schema.org",
             "@type": "LocalBusiness",
             "name": "Shield Signalisation Inc",
+            "url": "https://shieldsignalisation.com/"
             "logo": "https://shieldsignalisation.com/images/logo.png",
             "telephone": "+18887603504",
             "email": "info@shieldsignalisation.com",
@@ -74,9 +75,7 @@ export default function SiteLayout({
                       "geoRadius": 600
                   }
             },
-            "url": "https://shieldsignalisation.com/"
           }`
-             
          }}
         >
 
