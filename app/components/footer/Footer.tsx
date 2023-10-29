@@ -1,5 +1,6 @@
 import * as Icon from 'react-icons/lu';
 import Link from 'next/link'
+import Button from '@/app/components/button/Button'
 
 export default function Footer(){
     return (
@@ -52,8 +53,11 @@ export default function Footer(){
                       autoComplete='new-password'
                       type="text"
                       id="nom"
-                      placeholder="Votre nom"
-                      className="outline-none w-full  placeholder-darky-400 font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-50 ring-non border-none text-base"
+                      placeholder="Entrer votre nom"
+                      className="outline-none w-full  
+                      placeholder-darky-400 font-medium 
+                      rounded-md px-2 py-3 md:text-base 
+                      focus:bg-darky-50 ring-none border-transparent border-2 focus:border-primary"
                     />
                   </div>
                   <div
@@ -64,8 +68,9 @@ export default function Footer(){
                       autoComplete='new-password'
                       type="email"
                       id="email"
-                      placeholder="john@rhcp.com"
-                      className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 py-3 md:text-base focus:bg-darky-50 ring-non border-none text-base"
+                      placeholder="Entrer votre courriel"
+                      className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 py-3 md:text-base 
+                      focus:bg-darky-50 ring-non border-transparent border-2 focus:border-primary"
                     />
                   </div>
                 
@@ -74,15 +79,16 @@ export default function Footer(){
                     <label htmlFor="message" className="text-darky-200 pb-3 font-medium text-base">Message</label>
                     <textarea
                       required
-                      placeholder='Votre message'
+                      placeholder='Entrer votre message'
                       id="message"
                       name="message"
-                      className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 pt-3 pb-6 md:text-base focus:bg-darky-50 ring-non border-none text-base"
+                      className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 pt-3 pb-6 md:text-base 
+                      focus:bg-darky-50 ring-non  border-transparent border-2 focus:border-primary"
                     ></textarea>
                   </div>
-                  <button type="submit" className="bg-primary font-semibold text-primary-800 mt-2 px-4 py-3 rounded-md w-full flex flex-row items-center justify-center hover:bg-primary-200 transition shadow-md">
-                    Envoyer <Icon.LuArrowRight size='18' className='ml-4' /> 
-                 </button>
+                  <Button type="submit" size='md' label='Envoyer' icon='true'>
+                     <Icon.LuArrowRight size='22' className='ml-4' /> 
+                 </Button>
                 </form>
               </div>
             </div>
@@ -119,21 +125,21 @@ export default function Footer(){
   
                   <ul className="mt-4 space-y-4">
                     <li>
-                      <a href="/services/signalisation" className="text-base text-darky-200 transition hover:text-darky-200">
+                      <Link href="/services/signalisation" className="text-base text-darky-200 transition hover:text-darky-200">
                         Signalisation routière
-                      </a>
+                      </Link>
                     </li>
   
                     <li>
-                      <a href="/services/escorte" className="text-base text-darky-200 transition hover:text-darky-200">
+                      <Link href="/services/escorte" className="text-base text-darky-200 transition hover:text-darky-200">
                         Urgences 24 heures
-                      </a>
+                      </Link>
                     </li>
   
                     <li>
-                      <a href="/services/location" className="text-base text-darky-200 transition hover:text-darky-200">
+                      <Link href="/services/location" className="text-base text-darky-200 transition hover:text-darky-200">
                         Location d'équipement
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -143,21 +149,21 @@ export default function Footer(){
   
                   <ul className="mt-4 space-y-4 text-sm font-med">
                     <li>
-                      <a href="/job" className=" text-base text-darky-200 transition hover:text-darky-200">
+                      <Link href="/job" className=" text-base text-darky-200 transition hover:text-darky-200">
                         Carrières
-                      </a>
+                      </Link>
                     </li>
   
                     <li>
-                      <a href="/about" className=" text-base text-darky-200 transition hover:text-darky-200">
+                      <Link href="/about" className=" text-base text-darky-200 transition hover:text-darky-200">
                         L'équipe
-                      </a>
+                      </Link>
                     </li>
   
                     <li>
-                      <a href="/contact" className=" text-base text-darky-200 transition hover:text-darky-200">
+                      <Link href="/contact" className=" text-base text-darky-200 transition hover:text-darky-200">
                         Nous joindre
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

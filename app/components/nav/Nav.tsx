@@ -17,8 +17,8 @@ const menuVariants: Variants = {
 
 function TopBar(){
     return (
-        <div className='w-full flex justify-end items-center h-auto bg-darky'>
-            <Link href='callto:+18887603504' className='py-2 px-4 inline-flex items-center text-primary-800 bg-primary-400 hover:bg-primary-500'> <Icon.LuPhone size='18' /> <span className='px-3 font-semibold text-sm'> Soumission rapide </span> </Link>
+        <div className='w-full flex justify-end items-center h-auto bg-darky-800 '>
+            <Link href='callto:+18887603504' className='py-2 px-4 inline-flex items-center text-darky-800 bg-primary-400 hover:bg-primary-500'> <Icon.LuPhone size='18' /> <span className='px-3 font-semibold text-sm'> Soumission rapide </span> </Link>
         </div>
     )
 }

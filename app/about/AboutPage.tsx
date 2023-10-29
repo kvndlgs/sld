@@ -26,13 +26,13 @@ export default function About() {
     })
     return (
         <>
-            <div className=" py-12 md:py-16 px-10 md:px-20 bg-darky-500">
+            <div className=" py-12 md:py-16 px-10 md:px-20 bg-primary">
                 <PageTitle
                     subtitle="L'entreprise "
                     title="Qui sommes-nous ?"
-                    titleColor="text-darky-50"
-                    subtitleColor="text-darky-100"
-                    spanColor="bg-darky-300"
+                    titleColor="text-primary-100"
+                    subtitleColor="text-primary-50"
+                    spanColor="bg-primary-50"
                     aosData=''
                     aosDataDuration=''
                     aosDataEasing=''
@@ -40,7 +40,7 @@ export default function About() {
                 <div>
                     <p className="font-base font-md text-darky-50 text-align-left mx-auto md:px-20 px-6 md:mt-8 md:mb-12 w-full pt-2 pb-6">
                         Jeune mais résolument amibitieuse, notre entreprise vise a atteindre un statut de leader dans l'industrie.
-                        Chez Shield Signalisation, nous nous distinguons par nos normes de recrutement rigoureuse et notre ethique de
+                        Chez Shield Signalisation, nous nous distinguons par nos normes de recrutement rigoureuse et notre éthique de
                         travail exceptionelle. La sécurité et le bien-être
                         des travailleurs routiers ainsi que des usagers de la route nous tiennent à coeur, et nous avons fait de cette priorité une seconde nature.
                     </p>
@@ -50,15 +50,15 @@ export default function About() {
                     <PageTitle
                         subtitle="L'équipe"
                         title="Personnel éxécutifs"
-                        titleColor='text-darky-50'
-                        subtitleColor='text-darky-100'
-                        spanColor='bg-darky-300'
+                        titleColor='text-primary-50'
+                        subtitleColor='text-primary-100'
+                        spanColor='bg-primary-100'
                         aosData='flip-up'
                         aosDataDuration='400'
                         aosDataEasing='ease-in'
                     />
                 </div>
-                <div className="flex flex-wrap items-around justify-around pt-8">
+                <div className="flex flex-wrap items-around justify-around py-8">
                     <TeamCard
                         name="Sebastien Côté"
                         role="Président"

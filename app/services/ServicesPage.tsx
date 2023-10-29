@@ -18,11 +18,11 @@ interface ServiceItemProps {
 export const ServiceItem = (props: ServiceItemProps) => {
     return (
         
-        <div className="flex flex-col md:py-8 py-6 items-start justify-center md:w-[46%] w-full">
+        <div className="flex flex-col md:py-8 py-10 px-8 md:px-0 items-center md:items-start justify-center md:w-[46%] w-full">
         <Image data-aos='flip-up' data-aos-easing='ease-in' data-aos-duration='200' className="pb-4 justify-self-start" src={props?.img} width={130} height={130} alt={props?.alt} />
-        <h4 data-aos='fade-down' data-aos-duration='300' data-aos-easing='ease-in' className="text-md font-medium pb-3 text-darky-800">{props?.title}</h4>
-        <p className="text-base pb-4 text-darky-700">{props?.description}</p>
-        <Link className="text-darky font-bold hover:text-primary transition inline-flex items-center justify-between py-4" href={props?.link}>
+        <h4 data-aos='fade-down' data-aos-duration='300' data-aos-easing='ease-in' className="text-md font-bold pb-3 text-darky">{props?.title}</h4>
+        <p className="pb-4 text-darky-700">{props?.description}</p>
+        <Link className="text-primary font-bold hover:text-primary-600 transition inline-flex items-center justify-between py-4" href={props?.link}>
             En savoir plus 
             <Icon.LuArrowRightCircle className="ml-2" size="18px" />
         </Link>
@@ -98,14 +98,14 @@ export default function ServicesPage(){
                     </div>
                 </div>
        {/** why us */}
-                <div className="w-full bg-darky-50 py-10">
+                <div className="w-full bg-darky-100 py-10">
                     <div className="container w-fill mx-auto">
                     <PageTitle
                     subtitle='Pourquoi nous ?'
                      title='Votre sécurité est notre priorité absolue'
-                     titleColor='text-darky-800'
-                     subtitleColor='text-darky-600'
-                     spanColor='bg-primary-200'
+                     titleColor='text-darky-700'
+                     subtitleColor='text-darky-500'
+                     spanColor='bg-darky-500'
                      aosData='fade-up'
                      aosDataDuration='400'
                      aosDataEasing='ease-in'

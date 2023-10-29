@@ -43,30 +43,40 @@ export default function SiteLayout({
          type='application/ld+json'
          dangerouslySetInnerHTML={{
           __html:  `{
-            "@context": "htts://schema.org",
-            "@type": "Service de sécurité routière",
-            "name": "Shield Signalisation Inc.",
-            "logo": "https://shieldsignalisation.com/images/logo.png"
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Shield Signalisation Inc",
+            "logo": "https://shieldsignalisation.com/images/logo.png",
+            "telephone": "+18887603504",
+            "email": "info@shieldsignalisation.com",
+            "description": "Entreprise de signalisation routière offrant ses services a travers la province de Québec",
+            "openingHours": "Mon-Sun 00:00-23:59",
             "address": {
               "@type": "PostalAddress",
-              "streeAddress": "53 Boul. Lajeunesse Ouest",
+              "streetAddress": "53 Boul. Lajeunesse Ouest",
               "addressLocality": "Saint Jérôme",
               "addressRegion": "Québec",
-              "postalCode": "J7Y 1W4",
-              "addressCountry": "Canada"
+              "addressCountry": "Canada",
+              "postalCode": "J7Y 1W4"
             },
             "geo": {
               "@type": "GeoCoordinates",
               "latitude": 45.7894951,
               "longitude": -74.0157389
             },
-            "url": "https://shieldsignalisation.com",
-            "telephone": "+18887603504",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "opens": "always",
-              },
-             }`
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+               "@type": "GeoCoordinates",
+                 "latitude":  45.7894951,
+                 "longitude": -74.0157389
+                      },
+                      "geoRadius": 600
+                  }
+            },
+            "url": "https://shieldsignalisation.com/"
+          }`
+             
          }}
         >
 
