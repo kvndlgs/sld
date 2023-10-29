@@ -81,7 +81,8 @@ export default function Footer(){
                     ></textarea>
                   </div>
                   <button type="submit" className="bg-primary font-semibold text-primary-800 mt-2 px-4 py-3 rounded-md w-full flex flex-row items-center justify-center hover:bg-primary-200 transition shadow-md">
-                    Envoyer <Icon.LuArrowRight size='18' className='ml-4' /> </button>
+                    Envoyer <Icon.LuArrowRight size='18' className='ml-4' /> 
+                 </button>
                 </form>
               </div>
             </div>
@@ -207,7 +208,7 @@ export default function Footer(){
                   </li>
                 </ul>
   
-                <p className="mt-8 text-sm text-darky-400">
+                <p className="mt-8 text-sm text-darky-200">
                   &copy; 2023. Shield signalisation Inc.
                 </p>
               </div>

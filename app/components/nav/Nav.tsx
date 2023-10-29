@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import Button from '../button/Button';
+// import Button from '../button/Button';
 import * as Icon from 'react-icons/lu';
 import * as React from 'react';
 import { motion, AnimatePresence, Variants, useScroll, useMotionValueEvent } from 'framer-motion';
@@ -12,13 +12,13 @@ import { useMediaQuery } from '@/app/utils/useMediaQuery';
 
 const menuVariants: Variants = {
     hide: { scaleY: 0 },
-    show: { scaleY: 1},
+    show: { scaleY: 1 },
 }
 
 function TopBar(){
     return (
-        <div className='w-full flex justify-end items-center h-auto bg-darky-200'>
-            <Link href='callto:+1888' className='py-2 px-4 inline-flex items-center text-secondary-800 bg-secondary-300 hover:bg-secondary-600'> <Icon.LuPhone size='18' /> <span className='px-3 font-semibold text-sm'> Soumission rapide </span> </Link>
+        <div className='w-full flex justify-end items-center h-auto bg-darky'>
+            <Link href='callto:+18887603504' className='py-2 px-4 inline-flex items-center text-primary-800 bg-primary-400 hover:bg-primary-500'> <Icon.LuPhone size='18' /> <span className='px-3 font-semibold text-sm'> Soumission rapide </span> </Link>
         </div>
     )
 }
@@ -35,7 +35,7 @@ function NavMobile() {
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlSpace="preserve"
-                                width='45px'
+                                width='49px'
                                 x={0}
                                 y={0}
                                 enableBackground="new 123-184.1 504 541"
@@ -54,7 +54,7 @@ function NavMobile() {
                                 </g>
                             </svg>
                         </Link>
-                        <button  type='text' className='text-darky-600' onClick={toggleOpen}> { isOpen ?  <Icon.LuX size='28' /> : <Icon.LuMenu size='28' /> }</button>
+                        <button className='text-darky-600' onClick={toggleOpen}> { isOpen ?  <Icon.LuX size='28' /> : <Icon.LuMenu size='28' /> }</button>
             </div>
             <AnimatePresence mode='sync'>
 
@@ -102,10 +102,10 @@ function DesktopNav() {
     return (
         <header className='w-full h-auto'>
         <motion.nav 
-        className='sticky top-0 z-10 flex w-full h-18 py-4 px-12 bg-white items-center gap-2 justify-between drop-shadow-sm'
+        className='sticky top-0 z-10 flex w-full h-18 py-5 px-12 bg-white items-center gap-2 justify-between drop-shadow-sm'
         variants={menuVariants}
         animate={[
-            atPageStart ? 'transparent' : 'solid',
+             atPageStart ? 'transparent' : 'solid',
              scrollingUp ? 'show' : 'hidden', 
         ]}
         layout
@@ -115,7 +115,7 @@ function DesktopNav() {
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlSpace="preserve"
-                                width='49px'
+                                width='55px'
                                 x={0}
                                 y={0}
                                 enableBackground="new 123-184.1 504 541"
@@ -145,7 +145,7 @@ function DesktopNav() {
                         <Link href="/contact" className=' text-darky-700 hover:text-darky-600'> Nous joindre </Link>
                </div>
                 <div className='hidden md:flex items-center justify-center'>
-                <Button type='text' size='md' label='Soumission' href='/contact' icon='false'> <Icon.LuArrowRight size='16' /> </Button>
+                <Link className='flex items-center justify-between py-3 px-6 font-medium bg-primary text-primary-50 rounded-md border border-b-4 border-primary-600' href='/contact'> Soumission <Icon.LuArrowRight size='16' className='ml-2' /> </Link>
                 </div>
 
 

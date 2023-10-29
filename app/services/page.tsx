@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Services | Shield Signalisation Inc',
-    description: 'Entreprise de signalisation routière basée dans les laurentides et offrant ses services partout au Québec.',
+    description: "Services offert par Shield Signlisation Inc.",
 }
 
 export default function Services() {

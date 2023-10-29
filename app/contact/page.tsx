@@ -5,7 +5,7 @@ import Footer from '../components/footer/Footer'
 
 export const metadata: Metadata = {
     title: 'Nous joindre | Shield Signalisation Inc',
-    description: 'Entreprise de signalisation routière basée dans les laurentides et offrant ses services partout au Québec.',
+    description: "Contact Shield Signalisation Inc pour tout vos besoins en matière de signalisation routière.",
 }
 
 export default function Contact(){

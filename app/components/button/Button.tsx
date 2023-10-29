@@ -1,26 +1,40 @@
-export default function Button({label, icon, size, children, type, href}: {href: string, type: any, label: string, icon: string,  size: string, children: any}){
+import * as React from 'react'
+
+type ButtonType = 'button' | 'submit' | 'reset' | undefined;
+
+interface ButtonProps {
+    href?: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    children?: React.ReactNode;
+    label?: string;
+    icon?: string;
+    size?: "sm" | "md" | "lg";
+    type?: ButtonType;
+}
+
+
+
+const Button = (props: ButtonProps) => {
     return (
         <div>
-        { size == 'md' && (
-            <button type={type}
-
+        { props?.size == 'md' && (
+            <button
             className='flex items-center justify-between py-3 px-5 bg-primary text-white border border-b-4 border-primary-700 rounded-md shadow-md hover:shadow-lg transition ease-in-out font-semibold'>
-                { label }
-                { icon && (
+                { props?.label }
+                { props?.icon && (
                     <div className='ml-3'>
-                        { children }
+                        { props?.children }
                     </div> )
                }
             </button>
         )} {
-            size == 'lg' && (
+            props?.size == 'lg' && (
                 <button 
-                type={type} 
                 className='flex items-center justify-between py-5 px-8 bg-primary text-white border border-b-4 border-primary-700 rounded-md shadow-lg hover:shadow-xl transition ease-in-out font-semibold'>
-                    { label }
-                    { icon && (
+                    { props?.label }
+                    { props?.icon && (
                     <div className='ml-3'>
-                        { children }
+                        { props?.children }
                     </div> )
                }
                 </button>
@@ -29,3 +43,5 @@ export default function Button({label, icon, size, children, type, href}: {href:
         </div>
     )
 }
+
+export default Button;

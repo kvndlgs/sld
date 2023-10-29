@@ -6,7 +6,7 @@ export default function SignalisationPage() {
         <>
     <div className='w-full'>
                 <div className='w-full h-auto bg-darky-400'>
-              <Image src='/images/sld.png' width='500' height='500' className='mx-auto -pb-16' alt='signaleur routier'/>
+                     <Image src='/images/sld.png' width='500' height='500' className='mx-auto -pb-16' alt='signaleur routier'/>
                </div>
                     <PageTitle titleColor='text-darky-500' subtitle='Signalisation routière' subtitleColor='text-darky-700' spanColor='bg-primary-300' title="Solution moderne et adapté a vos besoins" />
                 </div>

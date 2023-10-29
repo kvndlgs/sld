@@ -6,16 +6,23 @@ import * as Icon from 'react-icons/lu'
 import PageTitle from '../components/page-title/PageTitle'
 
 
+interface ServiceItemProps {
+  title?: string;
+  link?: any;
+  img?: any;
+  description?: string;
+  alt?: any;
+}
 
 
-export function ServiceItem({title, link, img, description}: {title: string, link: string, img: string, description: string}) {
+export const ServiceItem = (props: ServiceItemProps) => {
     return (
         
         <div className="flex flex-col md:py-8 py-6 items-start justify-center md:w-[46%] w-full">
-        <Image  data-aos='flip-up' data-aos-easing='ease-in' data-aos-duration='200' className="pb-4 justify-self-start" src={img} width={130} height={130} alt={title} />
-        <h4 data-aos='fade-down' data-aos-duration='300' data-aos-easing='ease-in' className="text-md font-medium pb-3 text-darky-800">{title}</h4>
-        <p className="text-base font-normal pb-4 text-darky-700">{description}</p>
-        <Link className="text-darky font-bold hover:text-primary transition inline-flex items-center justify-between py-4" href={link}>
+        <Image data-aos='flip-up' data-aos-easing='ease-in' data-aos-duration='200' className="pb-4 justify-self-start" src={props?.img} width={130} height={130} alt={props?.alt} />
+        <h4 data-aos='fade-down' data-aos-duration='300' data-aos-easing='ease-in' className="text-md font-medium pb-3 text-darky-800">{props?.title}</h4>
+        <p className="text-base pb-4 text-darky-700">{props?.description}</p>
+        <Link className="text-darky font-bold hover:text-primary transition inline-flex items-center justify-between py-4" href={props?.link}>
             En savoir plus 
             <Icon.LuArrowRightCircle className="ml-2" size="18px" />
         </Link>
@@ -24,16 +31,22 @@ export function ServiceItem({title, link, img, description}: {title: string, lin
     )
 }
 
+interface FeatureItemProps {
+  img?: any;
+  title?: string;
+  description?: string;
+}
 
-function FeatureItem({img, title, description}: {img: string, title: string, description: string}) {
+
+export const FeatureItem = (props: FeatureItemProps) => {
     return (
         <div className="py-4 self-start">
             <div className="inline-flex items-center justify-start mx-auto">
                 <div className="text-primary p-4 pb-5">
-                 {img}
+                 {props?.img}
                  </div>
-                <h3 className='font-semibold text-md text-darky-600'> { title }</h3>
-                <p className='text-sm font-base text-darky-300'>{ description}</p>
+                <h3 className='text-darky-600 text-md ml-2'> { props?.title }</h3>
+                <p className='text-sm text-darky-300'>{ props?.description}</p>
             </div>
            
         </div>
@@ -141,13 +154,13 @@ export default function ServicesPage(){
                      aosDataEasing='ease-in'
                     />
                     <div className="flex flex-col md:flex-row items-center justify-between py-6 md:px-20 px-6">
-                    <div className="md:w-1/2 w-full flex flex-col justify-center w-full items-start py-2 md:py-6">
+                    <div className="md:w-1/2 w-full flex flex-col justify-center  items-start py-2 md:py-6">
                            <h2 className="font-bold text-lg text-secondary-800 md:w-[90%] md:-mt-20 pb-4">Travailler en toute confiance, et ce, partout au Québec.</h2>
                            <p className="pb-6 text-base mt-2 text-secondary-700 font-medium"> Contacter nous par téléphone au <a className="text-secondary-50 font-semibold" href="callto:18887603504">1 888-760-3504</a>. par courriel a l'adresse <a className="font-semibold text-secondary-50" href="mailto:info@shieldsignalisation.com">info@shieldsignalisation.com</a> ou encore, clavardez en direct pour plus d'information sur la disponibilté de nos équipes dans votre region.</p>
                            <Link className="bg-secondary-100 text-secondary-800 font-semibold py-3 px-4 shadow-md rounded-md hover:bg-secondary-200" href="/contact"> En savoir plus </Link>
                         </div>
                         <div data-aos='flip-up' data-aos-easing='ease-in' data-aos-duration='500' className="md:w-1/2 w-full flex items-center justify-center md:mt-0 mt-10">
-                            <Image src="/images/map.png" width="1300" height="1300" alt="zone desservies" />
+                            <Image src="/images/map.png" width="1300" height="1300" alt="zone desservies par shield signalisation" />
                         </div>
                     </div>
                     </div>
