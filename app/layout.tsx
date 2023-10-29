@@ -6,6 +6,7 @@ import Analytics from './components/google/Analytics'
 import Fb from './components/fb/Fb';
 
 
+
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function SiteLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="fr">
       <head>
@@ -72,7 +74,12 @@ export default function SiteLayout({
       </head>
       <Analytics />
       <Fb />
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+
+
+     {children}
+
+     </body>
     </html>
   )
 }

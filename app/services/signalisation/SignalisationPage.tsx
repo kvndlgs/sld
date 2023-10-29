@@ -4,8 +4,10 @@ import PageTitle from '../../components/page-title/PageTitle'
 export default function SignalisationPage() {
     return (
         <>
-    <div className='w-full md:px-20 px-8'>
-    <Image src='/images/helmet.png' width='180' height='180' className='mx-auto pt-8' alt='casque de signaleur routier'/>
+    <div className='w-full'>
+                <div className='w-full h-auto bg-darky-400'>
+              <Image src='/images/sld.png' width='500' height='500' className='mx-auto -pb-16' alt='signaleur routier'/>
+               </div>
                     <PageTitle titleColor='text-darky-500' subtitle='Signalisation routière' subtitleColor='text-darky-700' spanColor='bg-primary-300' title="Solution moderne et adapté a vos besoins" />
                 </div>
                 <div className='w-full h-auto flex flex-col items-center justify-center px-6 md:px-20'>

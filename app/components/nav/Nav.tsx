@@ -8,6 +8,8 @@ import { motion, AnimatePresence, Variants, useScroll, useMotionValueEvent } fro
 import { useMediaQuery } from '@/app/utils/useMediaQuery';
 
 
+
+
 const menuVariants: Variants = {
     hide: { scaleY: 0 },
     show: { scaleY: 1},
