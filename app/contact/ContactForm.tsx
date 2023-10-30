@@ -54,7 +54,7 @@ export default function ContactForm() {
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-around md:py-8 py-4 mx-auto text-center px-6 md:px-20">
                     <div className="w-full md:w-1/2 flex flex-col md:items-start md:mt-20 items-center justify-around pt-6 mx-auto md:px-8 ">
                         <h4 className="text-base md:text-md text-darky-400 font-medium pb-4"> Nous joindre </h4>
-                        <h2 className="md:text-lg text-md text-darky-800 font-semibold pb-3">Faites-nous part de vos projets </h2>
+                        <h1 className="md:text-lg text-md text-darky-800 font-semibold pb-3">Faites-nous part de vos projets </h1>
                         <span className="w-8 h-1.5 bg-primary-400"></span>
                         <p className='text-base font-medium text-darky-600 mt-8 text-center md:text-left'>
                             Notre équipe se fera un plaisir de vous aider a mettre en place une solution adapté a tout vos besoins en matière de signalisation routières.

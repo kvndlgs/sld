@@ -20,7 +20,7 @@ export const ServiceItem = (props: ServiceItemProps) => {
         
         <div className="flex flex-col md:py-8 py-10 px-8 md:px-0 items-center md:items-start justify-center md:w-[46%] w-full">
         <Image data-aos='flip-up' data-aos-easing='ease-in' data-aos-duration='200' className="pb-4 justify-self-start" src={props?.img} width={130} height={130} alt={props?.alt} />
-        <h4 data-aos='fade-down' data-aos-duration='300' data-aos-easing='ease-in' className="text-md font-bold pb-3 text-darky">{props?.title}</h4>
+        <h1 data-aos='fade-down' data-aos-duration='300' data-aos-easing='ease-in' className="text-md font-bold pb-3 text-darky">{props?.title}</h1>
         <p className="pb-4 text-darky-700">{props?.description}</p>
         <Link className="text-primary font-bold hover:text-primary-600 transition inline-flex items-center justify-between py-4" href={props?.link}>
             En savoir plus 
@@ -45,7 +45,7 @@ export const FeatureItem = (props: FeatureItemProps) => {
                 <div className="text-primary p-4 pb-5">
                  {props?.img}
                  </div>
-                <h3 className='text-darky-600 text-md ml-2'> { props?.title }</h3>
+                <h1 className='text-darky-600 text-md ml-2'> { props?.title }</h1>
                 <p className='text-sm text-darky-300'>{ props?.description}</p>
             </div>
            

@@ -7,6 +7,10 @@ export default function manifest(): MetadataRoute.Manifest {
         description: 'Entreprise de signalisation routière. Nous sommes situés à Saint-Jérôme et nous offrons nos services partout au Québec.',
         start_url: '/',
         display: 'standalone',
+        theme_color: '#3A4349',
+        background_color: '#fff',
+        lang: 'fr',
+        categories: ['business'],
         icons: [
             {
                 src: '/favicon.ico',

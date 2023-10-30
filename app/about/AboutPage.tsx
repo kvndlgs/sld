@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import * as Icon from 'react-icons/lu'
+// import * as Icon from 'react-icons/lu'
 import PageTitle from '../components/page-title/PageTitle'
 import AOS from 'aos';
 import * as React from 'react'
@@ -42,7 +42,8 @@ export default function About() {
                         Jeune mais résolument amibitieuse, notre entreprise vise a atteindre un statut de leader dans l'industrie.
                         Chez Shield Signalisation, nous nous distinguons par nos normes de recrutement rigoureuse et notre éthique de
                         travail exceptionelle. La sécurité et le bien-être
-                        des travailleurs routiers ainsi que des usagers de la route nous tiennent à coeur, et nous avons fait de cette priorité une seconde nature.
+                        des travailleurs routiers ainsi que des usagers de la route nous tiennent à coeur, 
+                        et nous avons fait de cette priorité une seconde nature.
                     </p>
                 </div>
 
