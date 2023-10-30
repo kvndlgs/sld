@@ -48,6 +48,7 @@ export default function SiteLayout({
             "logo": "https://shieldsignalisation.com/images/logo.png",
             "telephone": "+18887603504",
             "email": "info@shieldsignalisation.com",
+            "image": "https://shieldsignalisation.com/images/og-images.png",
             "description": "Entreprise de signalisation routière offrant ses services a travers la province de Québec",
             "openingHours": "Mon-Sun 00:00-23:59",
             "address": {

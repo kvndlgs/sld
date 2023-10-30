@@ -2,6 +2,7 @@
 import * as React from 'react';
 import * as Icon from 'react-icons/lu'
 import Button from '../components/button/Button'
+import Input from './../components/form/Form';
 
 export default function ContactForm() {
     const [state, setState] = React.useState({
@@ -64,8 +65,9 @@ export default function ContactForm() {
                     <div className="md:w-1/2 w-full py-4">
                         <form onSubmit={handleSubmit} className="py-2 w-full px-4 md:px-8">
                             <div className="flex flex-col items-start justify-between pt-2 pb-3">
+                                            {/** 
                                 <label htmlFor="fullname" className="text-darky-400 font-medium text-base ml-2">Nom</label>
-                                <input
+               <input
                                     value={fullname}
                                     onChange={onChange}
                                     type="text"
@@ -73,6 +75,12 @@ export default function ContactForm() {
                                     id="fullname"
                                     placeholder="John Doe"
                                     className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
+                                />
+    */}
+                                <Input 
+                                  label='Nom'
+
+                                  variants='primary'
                                 />
                             </div>
                             <div className="w-full flex flex-row justify-between items-between">
