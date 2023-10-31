@@ -36,6 +36,7 @@ export default function SiteLayout({
         <meta property='og:image:height' content='630' />
         <meta property='og:locale' content='fr_CA' />
         <meta property='og:locale:alternate' content='en_CA' />
+        <link rel='icon' href='./favicon.ico'/>
         <Script
          id='ldjson-data'
          type='application/ld+json'

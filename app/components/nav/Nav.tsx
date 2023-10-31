@@ -69,16 +69,16 @@ function NavMobile() {
                       key={isOpen ? 'open' : 'closed'}
                       >
          
-                        <Link className='text-base font-medium text-darky-700 hover:text-darky-400' href="/services"> Nos services </Link>
+                        <Link className='text-base font-semibold text-darky-700 hover:text-darky-400' href="/services"> Nos services </Link>
             
                 
-                        <Link className='text-base font-medium text-darky-700 hover:text-darky-400' href="/about"> L'entreprise </Link>
+                        <Link className='text-base font-semibold text-darky-700 hover:text-darky-400' href="/about"> L'entreprise </Link>
                
             
-                        <Link className='text-base font-medium text-darky-700 hover:text-darky-400' href="/job"> Carrières </Link>
+                        <Link className='text-base font-semibold text-darky-700 hover:text-darky-400' href="/job"> Carrières </Link>
               
               
-                        <Link className='text-base font-medium text-darky-700 hover:text-darky-400' href="/contact"> Nous joindre </Link>
+                        <Link className='text-base font-semibold text-darky-700 hover:text-darky-400' href="/contact"> Nous joindre </Link>
            
                       </motion.div>
                 )}
@@ -136,13 +136,13 @@ function DesktopNav() {
                         </Link>
                         <div className='flex items-center justify-around mx-auto gap-8'>
 
-                        <Link href="/services" className=' text-darky-700 hover:text-darky-600'> Nos services </Link>
+                        <Link href="/services" className='font-semibold text-darky-700 hover:text-darky-600'> Nos services </Link>
 
-                        <Link href="/about" className=' text-darky-700 hover:text-darky-600'> L'entreprise </Link>
+                        <Link href="/about" className='font-semibold text-darky-700 hover:text-darky-600'> L'entreprise </Link>
 
-                        <Link href="/job" className=' text-darky-700 hover:text-darky-600'> Carrières </Link>
+                        <Link href="/job" className='font-semibold text-darky-700 hover:text-darky-600'> Carrières </Link>
 
-                        <Link href="/contact" className=' text-darky-700 hover:text-darky-600'> Nous joindre </Link>
+                        <Link href="/contact" className='font-semibold text-darky-700 hover:text-darky-600'> Nous joindre </Link>
                </div>
                 <div className='hidden md:flex items-center justify-center'>
                 <Link className='flex items-center justify-between py-3 px-6 font-medium bg-primary text-primary-50 rounded-md border border-b-4 border-primary-600' href='/contact'> Soumission <Icon.LuArrowRight size='16' className='ml-2' /> </Link>

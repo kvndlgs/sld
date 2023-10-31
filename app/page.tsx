@@ -1,14 +1,17 @@
 import Nav from './components/nav/Nav';
 import Hero from './components/hero/Hero';
 import { Metadata } from 'next';
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer';
 import { ServiceItem } from './services/ServicesPage';
-
+import Image from 'next/image';
+import Button from './components/button/Button'
+import * as Icon from 'react-icons/lu'
 
 export const metadata: Metadata = {
     title: 'Shield Signalisation Inc',
     description: 'Entreprise de signalisation routière basée dans les laurentides et offrant ses services partout au Québec.',
 }
+
 
 export default function Home(){
     return (
@@ -41,6 +44,32 @@ export default function Home(){
                           link="/contact"
                         />
                         </div>
+{/** 
+                        <div className='w-full h-auto flex flex-row justify-between items-center'>
+
+
+           
+
+                          
+                       
+                          <div>
+                           <div className='w-half flex flex-row'>
+                                <Image src='/images/flaggerman.png' alt='signaleur routier' width='320' height='320' />
+                                  <h1 className='text-lg font-semibold text-white py-3'> Tu aimerais devenir signaleur routier ?</h1>
+                                    <Button size='md' label='Envoies ton C.V' icon='true'><Icon.LuArrowRight size='22' /></Button>
+                            
+                                </div>
+                         </div>
+                             <div className='w-half h-full flex flex-row bg-emeraude-300 pr-16 py-8'>
+                           
+                                  <h1 className='text-lg font-semibold text-emeraude-800'> Some other shit</h1>
+                           
+                             </div>
+
+   
+                        
+                        </div>
+    */}
                     <Footer />
         </>
     )
