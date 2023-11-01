@@ -4,7 +4,7 @@ export default function robots(): MetadataRoute.Robots {
     return {
         rules: {
             userAgent: '*',
-            allow: [ '/' , '/about' , '/services' , '/services/signalisation' , '/job' , '/contact' ],
+            allow: '/',
             disallow: '/private',
         },
         sitemap: 'https://shieldsignalisation.com/sitemap.xml',
