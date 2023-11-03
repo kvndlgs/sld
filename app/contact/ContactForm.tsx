@@ -3,6 +3,10 @@ import * as React from "react";
 import * as Icon from "react-icons/lu";
 import Button from "../components/button/Button";
 
+interface ContactFormProps {
+  error: string;
+}
+
 export default function ContactForm() {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -23,7 +27,14 @@ export default function ContactForm() {
       }
       const data = await response.json();
     } catch (error) {
-      setError(error.message);
+      if (
+        typeof error === "object" &&
+        error &&
+        "message" in error &&
+        typeof error.message == "string"
+      )
+        setError(error.message);
+
       console.error(error);
     } finally {
       setIsLoading(false);
