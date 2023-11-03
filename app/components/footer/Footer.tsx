@@ -5,9 +5,9 @@ import Button from "@/app/components/button/Button";
 export default function Footer() {
   return (
     <footer className="bg-darky  border-t-2 border-darky-400">
-      <div className="container mx-auto w-fill p-5 px-8 md:px-16">
+      <div className="container mx-auto w-fill p-5 px-4 md:px-16">
         <div className="lg:grid lg:grid-cols-2">
-          <div className="border-b border-darky-700 py-6 lg:order-last lg:border-b-0 lg:border-s lg:py-16 lg:ps-16">
+          <div className="border-b border-darky-700 px-4 py-6 lg:order-last lg:border-b-0 lg:border-s lg:py-16 lg:ps-16">
             <div className="block text-white lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,8 @@ export default function Footer() {
                 <ul className="mt-4 space-y-4 text-sm">
                   <li>
                     <a
-                      href="#"
+                      href="https://aqtr.com"
+                      rel="_blank"
                       className=" text-base text-darky-200 transition hover:text-darky-200"
                     >
                       AQTR
@@ -264,7 +265,7 @@ export default function Footer() {
               </ul>
 
               <p className="mt-8 text-sm text-darky-200">
-                &copy; 2023. Shield signalisation Inc.
+                &copy; 2023 Shield signalisation Inc.
               </p>
             </div>
           </div>

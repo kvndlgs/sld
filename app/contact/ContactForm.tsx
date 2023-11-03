@@ -4,6 +4,31 @@ import * as Icon from "react-icons/lu";
 import Button from "../components/button/Button";
 
 export default function ContactForm() {
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [error, setError] = React.useState<string | null>(null);
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      const response = await fetch("api/send", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Oops, une erreur est survenue.");
+      }
+      const data = await response.json();
+    } catch (error) {
+      setError(error.message);
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
   return (
     <>
       <div className="w-full py-10 md:py-10 px-6 md:px-12 ">
@@ -25,7 +50,7 @@ export default function ContactForm() {
           </div>
 
           <div className="md:w-1/2 w-full py-4">
-            <form className="py-2 w-full px-4 md:px-8">
+            <form className="py-2 w-full px-4 md:px-8" onSubmit={onSubmit}>
               <div className="flex flex-col items-start justify-between pt-2 pb-3">
                 <label
                   htmlFor="fullname"
@@ -36,7 +61,6 @@ export default function ContactForm() {
                 <input
                   type="text"
                   name="fullname"
-                  id="fullname"
                   placeholder="John Doe"
                   className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
                 />
@@ -52,7 +76,6 @@ export default function ContactForm() {
                   <input
                     type="email"
                     name="email"
-                    id="email"
                     placeholder="Entrez votre courriel"
                     className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
                   />
@@ -68,7 +91,6 @@ export default function ContactForm() {
                     type="number"
                     name="phone"
                     placeholder="+1-438-526-5465"
-                    id="phone"
                     className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
                   />
                 </div>
@@ -85,7 +107,6 @@ export default function ContactForm() {
                     type="text"
                     name="company"
                     placeholder="Entrer le nom de l'entreprise"
-                    id="company"
                     className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
                   />
                 </div>
@@ -99,7 +120,6 @@ export default function ContactForm() {
                   <input
                     type="text"
                     name="role"
-                    id="role"
                     placeholder="Votre role dans l'entreprise"
                     className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
                   />
@@ -114,15 +134,23 @@ export default function ContactForm() {
                 </label>
                 <textarea
                   name="message"
-                  id="message"
                   placeholder="Entrez les détails"
                   className="w-full pt-2 pb-12 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
                 ></textarea>
               </div>
 
               <div className="flex flex-col items-start justify-around pt-2 pb-3">
-                <Button size="md" icon="true" label="Envoyer" type="submit">
-                  <Icon.LuArrowRight size="18" />
+                <Button
+                  size="md"
+                  icon="true"
+                  label={isLoading ? "En cours..." : "Envoyer"}
+                  type="submit"
+                >
+                  {isLoading ? (
+                    <Icon.LuLoader size="18" />
+                  ) : (
+                    <Icon.LuArrowRight size="18" />
+                  )}
                 </Button>
               </div>
             </form>
