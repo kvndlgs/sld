@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { Mail } from '@/app/components/mail/page'
+// import { Mail } from '@/app/components/mail/page'
 import { resend } from '@/app/lib/resend'
 import * as React from 'react';
 

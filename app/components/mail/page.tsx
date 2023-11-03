@@ -19,7 +19,7 @@ interface MailProps {
   message: string;
 }
 
-export const Mail: React.FC<Readonly<MailProps>> = ({
+export const Email: React.FC<Readonly<MailProps>> = ({
   fullName,
   phone,
   email,
