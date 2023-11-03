@@ -3,13 +3,10 @@ import * as React from "react";
 import * as Icon from "react-icons/lu";
 import Button from "../components/button/Button";
 
-interface ContactFormProps {
-  error: string;
-}
-
 export default function ContactForm() {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [error, setError] = React.useState<string | null>(null);
+
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsLoading(true);
@@ -21,6 +18,7 @@ export default function ContactForm() {
         method: "POST",
         body: formData,
       });
+      console.log(formData);
 
       if (!response.ok) {
         throw new Error("Oops, une erreur est survenue.");
@@ -42,9 +40,9 @@ export default function ContactForm() {
   }
   return (
     <>
-      <div className="w-full py-10 md:py-10 px-6 md:px-12 ">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-around md:py-8 py-4 mx-auto text-center px-6 md:px-20">
-          <div className="w-full md:w-1/2 flex flex-col md:items-start md:mt-20 items-center justify-around pt-6 mx-auto md:px-8 ">
+      <div className="w-full py-10 md:py-10 px-4 md:px-16 ">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-around md:py-8 py-4 mx-auto text-center">
+          <div className="w-full md:w-1/2 flex flex-col md:items-start md:mt-20 items-center justify-around pt-6 mx-auto ">
             <h4 className="text-base md:text-md text-darky-400 font-medium pb-4">
               {" "}
               Nous joindre{" "}
@@ -53,15 +51,15 @@ export default function ContactForm() {
               Faites-nous part de vos projets{" "}
             </h1>
             <span className="w-8 h-1.5 bg-primary-400"></span>
-            <p className="text-base font-medium text-darky-600 mt-8 text-center md:text-left">
+            <p className="text-base font-medium text-darky-600 mt-8 text-left">
               Nos équipes de signaleurs se feront un plaisir de vous aider à
               mettre en place une solution adapté à tout vos besoins en matière
               de signalisation routière.
             </p>
           </div>
 
-          <div className="md:w-1/2 w-full py-4">
-            <form className="py-2 w-full px-4 md:px-8" onSubmit={onSubmit}>
+          <div className="md:w-1/2 w-full h-auto py-4 ">
+            <form className="py-2 w-full" onSubmit={onSubmit}>
               <div className="flex flex-col items-start justify-between pt-2 pb-3">
                 <label
                   htmlFor="fullname"
@@ -76,7 +74,7 @@ export default function ContactForm() {
                   className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
                 />
               </div>
-              <div className="w-full flex flex-row justify-between items-between">
+              <div className="w-full h-auto flex md:flex-row flex-col md:justify-between md:items-between items-center justify-center ">
                 <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2">
                   <label
                     htmlFor="email"
@@ -85,7 +83,7 @@ export default function ContactForm() {
                     Courriel
                   </label>
                   <input
-                    type="email"
+                    type="string"
                     name="email"
                     placeholder="Entrez votre courriel"
                     className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
@@ -106,7 +104,7 @@ export default function ContactForm() {
                   />
                 </div>
               </div>
-              <div className="w-full flex flex-row justify-between items-start">
+              <div className="w-full flex md:flex-row flex-col md:justify-between justify-center items-center md:items-start">
                 <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2">
                   <label
                     htmlFor="company"
