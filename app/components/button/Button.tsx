@@ -19,10 +19,10 @@ const Button = (props: ButtonProps) => {
         <div>
         { props?.size == 'md' && (
             <button
-            className='flex items-center justify-between py-3 px-5 bg-primary text-white border border-b-4 border-primary-700 rounded-md shadow-md hover:shadow-lg transition ease-in-out font-semibold'>
+            className='flex items-center justify-between py-4 px-5 bg-primary text-white border border-b-4 border-primary-800 rounded-lg shadow-md hover:shadow-lg transition ease-in-out font-semibold'>
                 { props?.label }
                 { props?.icon && (
-                    <div className='ml-3'>
+                    <div className='ml-2'>
                         { props?.children }
                     </div> )
                }
@@ -30,10 +30,10 @@ const Button = (props: ButtonProps) => {
         )} {
             props?.size == 'lg' && (
                 <button 
-                className='flex items-center justify-between py-5 px-8 bg-primary text-white border border-b-4 border-primary-700 rounded-md shadow-lg hover:shadow-xl transition ease-in-out font-semibold'>
+                className='flex items-center justify-between py-6 px-8 bg-primary text-white border border-b-4 border-primary-700 rounded-lg shadow-lg hover:shadow-xl transition ease-in-out font-semibold'>
                     { props?.label }
                     { props?.icon && (
-                    <div className='ml-3'>
+                    <div className='ml-2'>
                         { props?.children }
                     </div> )
                }

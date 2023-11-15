@@ -8,6 +8,7 @@ import Image from "next/image";
 import Button from "./components/button/Button";
 import * as Icon from "react-icons/lu";
 import Link from "next/link";
+//import MyMap from "@/app/components/map/Map";
 
 export const metadata: Metadata = {
   title: "Shield Signalisation Inc",
@@ -20,7 +21,8 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <div className="w-full flex flex-col md:flex-row md:flex-wrap  items-center justify-around mx-auto md:justify-around md:items-around md:pt-6 pt-8 px-4 md:px-20">
+
+      <div className="w-full flex flex-col md:flex-row md:flex-wrap items-around justify-center mx-auto md:justify-around md:items-around py-16 px-6 md:px-20">
         <ServiceItem
           title="Signalisation routière"
           description="Nos signaleurs vous permettrons d’atteindre vos objectifs en tout sécurité"
@@ -47,7 +49,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="w-full bg-darky-100 py-10">
+      <div className="w-full bg-darky-50 py-10">
         <div className="container w-fill mx-auto">
           <PageTitle
             subtitle="Pourquoi nous ?"
@@ -98,35 +100,35 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-emeraude-600 px-4 md:px20">
-        <div className="container w-full mx-auto py-8">
+      <div className="bg-primary-300 px-6 md:px-20">
+        <div className="container w-full mx-auto py-4">
           <PageTitle
             subtitle="Régions désservis"
             title="Partout à travers le Québec."
-            titleColor="text-emeraude-800"
-            subtitleColor="text-emeraude-700"
-            spanColor="bg-emeraude-700"
+            titleColor="text-primary-800"
+            subtitleColor="text-primary-700"
+            spanColor="bg-primary-700"
             aosData="fade-down"
             aosDataDuration="400"
             aosDataEasing="ease-in"
           />
-          <div className="flex flex-col md:flex-row items-center justify-between py-6 md:px-20 px-4">
-            <div className="md:w-1/2 w-full flex flex-col justify-center  items-start py-2 md:py-6">
-              <h2 className="font-bold text-lg text-emeraude-800 md:w-[90%] md:-mt-20 pb-4">
+          <div className="flex flex-col md:flex-row items-center justify-between md:px-20 px-4">
+            <div className="md:w-1/2 w-full flex flex-col justify-center  items-start py-2 md:py-3">
+              <h2 className="font-bold text-lg text-primary-800 md:w-[90%]">
                 Travailler en toute confiance, et ce, partout au Québec.
               </h2>
-              <p className="pb-6 text-base mt-2 text-emeraude-700 font-medium">
+              <p className="pb-6 text-base mt-2 text-primary-700 font-medium">
                 {" "}
                 Contacter nous par téléphone au{" "}
                 <a
-                  className="text-emeraude-50 font-semibold"
+                  className="text-white font-semibold"
                   href="callto:18887603504"
                 >
                   1 888-760-3504
                 </a>
                 . par courriel a l'adresse{" "}
                 <a
-                  className="font-semibold text-emeraude-50"
+                  className="font-semibold text-white"
                   href="mailto:info@shieldsignalisation.com"
                 >
                   info@shieldsignalisation.com
@@ -135,7 +137,7 @@ export default function Home() {
                 disponibilté de nos équipes dans votre region.
               </p>
               <Link
-                className="bg-secondary-100 text-emeraude-800 font-semibold py-3 px-4 shadow-md rounded-md hover:bg-emeraude-200"
+                className="bg-primary-100 text-primary-800 font-semibold py-3 px-4 shadow-md rounded-md hover:bg-primary-200"
                 href="/contact"
               >
                 {" "}
