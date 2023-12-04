@@ -45,7 +45,7 @@ export default function About() {
   });
   return (
     <>
-      <div className=" py-12 md:py-16 px-4 md:px-16 bg-primary">
+      <div className=" py-8 md:py-10 md:px-16 bg-primary">
         <PageTitle
           subtitle="L'entreprise "
           title="Qui sommes-nous ?"
@@ -57,18 +57,18 @@ export default function About() {
           aosDataEasing=""
         />
         <div>
-          <p className="font-base font-md text-darky-50 text-align-left mx-auto md:px-20 px-6 md:mt-8 md:mb-12 w-full pt-2 pb-6">
+          <p className="font-medium text-white text-align-left mx-auto px-4 md:px-20 md:mt-8 md:mb-12">
             Jeune mais résolument amibitieuse, notre entreprise vise a atteindre
             un statut de leader dans l'industrie. Chez Shield Signalisation,
             nous nous distinguons par nos normes de recrutement rigoureuse et
             notre éthique de travail exceptionelle. La sécurité et le bien-être
             des travailleurs routiers ainsi que des usagers de la route nous
-            tiennent à coeur, et nous avons fait de cette priorité une seconde
+            tient à coeur, et nous avons fait de cette priorité une seconde
             nature.
           </p>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full py-8 md:py-14">
+        <div className="flex flex-row items-center justify-center w-full py-8 md:py-10 border-t-1 border-primary-700">
           <PageTitle
             subtitle="L'équipe"
             title="Personnel éxécutifs"
@@ -80,7 +80,7 @@ export default function About() {
             aosDataEasing="ease-in"
           />
         </div>
-        <div className="flex flex-wrap items-around justify-around py-8">
+        <div className="bg-primary-300 md:rounded-lg w-full flex flex-wrap items-around justify-around py-8">
           <TeamCard
             name="Sebastien Côté"
             role="Président"

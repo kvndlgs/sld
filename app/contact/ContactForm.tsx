@@ -17,10 +17,12 @@ export default function ContactForm() {
               {" "}
               Nous joindre{" "}
             </h4>
+
             <h1 className="text-lg md:text-xl font-semibold text-white">
               {" "}
               Faites-nous part de vos projets{" "}
             </h1>
+            <span className="w-10 h-1 bg-white rounded-md mt-2"></span>
             <p className="text-sm md:text-base text-white mt-3">
               Nos équipes de signaleurs se feront un plaisir de vous aider à
               mettre en place une solution adapté à tout vos besoins en matière
@@ -47,7 +49,7 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2">
+            <div className="w-full flex flex-col items-start justify-around pt-2 pb-3 pr-2 md:w-3/4 mx-auto">
               <label
                 htmlFor="email"
                 className="text-darky-400 font-medium text-base ml-2 pb-2"
@@ -61,7 +63,7 @@ export default function ContactForm() {
                 className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
               />
             </div>
-            <div className="w-full flex flex-col items-start justify-center pt-2 pb-3 md:pl-2 md:w-3/4 mx-auto">
+            <div className="w-full flex flex-col items-start justify-center pt-2 pb-3 pr-2 md:pl-2 md:w-3/4 mx-auto">
               <label
                 htmlFor="phone"
                 className="text-darky-400 font-medium text-base ml-2 pb-2"
