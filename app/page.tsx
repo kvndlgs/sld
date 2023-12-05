@@ -8,7 +8,7 @@ import Image from "next/image";
 import Button from "./components/button/Button";
 import * as Icon from "react-icons/lu";
 import Link from "next/link";
-import MyMap from "@/app/components/map/Map";
+// import MyMap from "@/app/components/map/Map";
 
 export const metadata: Metadata = {
   title: "Shield Signalisation Inc",
@@ -48,7 +48,7 @@ export default function Home() {
           link="/contact"
         />
       </div>
-      <MyMap />
+
       <div className="w-full bg-darky-50 py-10">
         <div className="container w-fill mx-auto">
           <PageTitle
