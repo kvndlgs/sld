@@ -8,6 +8,7 @@ import Image from "next/image";
 import Button from "./components/button/Button";
 import * as Icon from "react-icons/lu";
 import Link from "next/link";
+
 // import MyMap from "@/app/components/map/Map";
 
 export const metadata: Metadata = {
