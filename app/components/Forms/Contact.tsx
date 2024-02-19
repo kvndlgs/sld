@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "@/utils/sendEmail";
+import { sendEmail } from "@/app/utils/handleSend";
 import * as Icon from "react-icons/lu";
 
 export type FormData = {
@@ -120,18 +120,13 @@ const Contact: FC = () => {
       </div>
 
       <div className="flex flex-col items-start justify-around pt-2 pb-2 w-full md:w-3/4 mx-auto">
-        <Button
-          size="md"
-          icon="true"
-          label={isLoading ? "En cours..." : "Envoyer"}
-          type="submit"
-        >
+        <button type="submit">
           {isLoading ? (
             <Icon.LuLoader size="18" />
           ) : (
             <Icon.LuArrowRight size="18" />
           )}
-        </Button>
+        </button>
       </div>
     </form>
   );

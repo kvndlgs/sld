@@ -1,19 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as Icon from "react-icons/lu";
-import Button from "../button/Button";
-import gsap from 'gsap';
 
 export default function Hero() {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#truck",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: true,
-    },
-    tl.to("#truck")
-  });
   return (
     <div>
       <div className="w-full md:px-16 px-4 py-12 pt-8 md:py-14 bg-darky-700">
@@ -39,9 +28,9 @@ export default function Hero() {
               solution adaptée a vos besoins.
             </p>
             <Link href="/services">
-              <Button label="En savoir plus" size="md" icon="true">
+              <button type="button">
                 <Icon.LuArrowRight size="16" />
-              </Button>
+              </button>
             </Link>
           </div>
         </div>

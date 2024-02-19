@@ -1,6 +1,6 @@
 import * as Icon from "react-icons/lu";
 import Link from "next/link";
-import Button from "@/app/components/button/Button";
+import { QuickQuote } from "@/app/components/Forms/QuickQuote";
 
 export default function Footer() {
   return (
@@ -39,65 +39,7 @@ export default function Footer() {
                 </h2>
                 <span className="w-10 h-1 bg-primary-300 rounded-lg"></span>
               </div>
-
-              <form className="mt-4 w-full">
-                <div className="flex-col pb-2">
-                  <label
-                    htmlFor="nom"
-                    className="text-darky-200 pb-3 font-medium text-base"
-                  >
-                    Nom
-                  </label>
-                  <input
-                    required
-                    autoComplete="new-password"
-                    type="text"
-                    id="nom"
-                    placeholder="Entrer votre nom"
-                    className="outline-none w-full  
-                      placeholder-darky-400 font-medium 
-                      rounded-md px-2 py-3 md:text-base 
-                      focus:bg-darky-50 ring-none border-transparent border-2 focus:border-primary"
-                  />
-                </div>
-                <div className="flex-col pb-2">
-                  <label
-                    htmlFor="email"
-                    className="text-darky-200 pb-3 font-medium text-base"
-                  >
-                    Courriel
-                  </label>
-                  <input
-                    required
-                    autoComplete="new-password"
-                    type="email"
-                    id="email"
-                    placeholder="Entrer votre courriel"
-                    className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 py-3 md:text-base 
-                      focus:bg-darky-50 ring-non border-transparent border-2 focus:border-primary"
-                  />
-                </div>
-
-                <div className="flex-col pb-2">
-                  <label
-                    htmlFor="message"
-                    className="text-darky-200 pb-3 font-medium text-base"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    required
-                    placeholder="Entrer votre message"
-                    id="message"
-                    name="message"
-                    className="outline-none w-full placeholder-darky-400 font-medium rounded-md px-2 pt-3 mb-4 md:text-base 
-                      focus:bg-darky-50 ring-non  border-transparent border-2 focus:border-primary"
-                  ></textarea>
-                </div>
-                <Button type="submit" size="md" label="Envoyer" icon="true">
-                  <Icon.LuArrowRight size="22" className="ml-4" />
-                </Button>
-              </form>
+              <QuickQuote />
             </div>
           </div>
 
