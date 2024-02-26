@@ -2,7 +2,7 @@
 import * as React from "react";
 import * as Icon from "react-icons/lu";
 import Button from "@/app/components/button/Button";
-import { Contact } from "@/app/components/forms/Contact";
+import { Contact } from "@/app/components/Forms/Contact";
 
 export default function ContactForm() {
   return (
