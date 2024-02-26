@@ -1,13 +1,10 @@
 "use client";
 import * as React from "react";
 import * as Icon from "react-icons/lu";
-import Button from "../components/button/Button";
-import Contact from '../components/forms/Contact';
+import Button from "@/app/components/button/Button";
+import { Contact } from "@/app/components/forms/Contact";
 
 export default function ContactForm() {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
-  const [error, setError] = React.useState<string | null>(null);
-
   return (
     <>
       <div className="flex md:flex-row flex-col w-full h-full">

@@ -2,18 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import * as Icon from "react-icons/lu";
 import Button from "../button/Button";
-import gsap from 'gsap';
 
 export default function Hero() {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#truck",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: true,
-    },
-    tl.to("#truck")
-  });
   return (
     <div>
       <div className="w-full md:px-16 px-4 py-12 pt-8 md:py-14 bg-darky-700">

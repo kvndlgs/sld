@@ -1,8 +1,9 @@
 "use client";
 import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "@/utils/sendEmail";
+import { sendEmail } from "@/app/utils/handleSend";
 import * as Icon from "react-icons/lu";
+import Button from "@/app/components/button/Button";
 
 export type FormData = {
   name: string;
@@ -13,7 +14,7 @@ export type FormData = {
   message: string;
 };
 
-const Contact: FC = () => {
+export const Contact: FC = () => {
   const { register, handleSubmit } = useForm<FormData>();
   const [isSent, setIsSent] = useState(false);
 
@@ -35,7 +36,6 @@ const Contact: FC = () => {
         </label>
         <input
           type="text"
-          name="fullname"
           placeholder="Entrer votre nom"
           className="w-full py-3 px-2 text-darky-600 placeholder-darky-400  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
           {...register("name", { required: true })}
@@ -51,7 +51,6 @@ const Contact: FC = () => {
         </label>
         <input
           type="string"
-          name="email"
           placeholder="Entrer votre courriel"
           className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
           {...register("email", { required: true })}
@@ -66,10 +65,10 @@ const Contact: FC = () => {
           Téléphone
         </label>
         <input
-          type="number"
-          name="phone"
+          type="text"
           placeholder="Entrer votre téléphone"
           className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
+          {...register("phone", { required: true })}
         />
       </div>
       <div className="w-full flex md:flex-row flex-col md:justify-between justify-center items-center md:items-start md:w-3/4 mx-auto">
@@ -83,9 +82,9 @@ const Contact: FC = () => {
           </label>
           <input
             type="text"
-            name="company"
             placeholder="Entrer le nom de l'entreprise"
             className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
+            {...register("company", { required: true })}
           />
         </div>
         <div className="w-full flex flex-col items-start justify-around  pt-2 pb-3 pl-2">
@@ -97,7 +96,6 @@ const Contact: FC = () => {
           </label>
           <input
             type="text"
-            name="role"
             placeholder="Votre role dans l'entreprise"
             className="w-full py-3 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
             {...register("role", { required: true })}
@@ -112,7 +110,6 @@ const Contact: FC = () => {
           Message
         </label>
         <textarea
-          name="message"
           placeholder="Entrez les détails"
           className="w-full pt-2 pb-12 px-2 text-darky-600 placeholder-darky-600  font-medium bg-darky-100 rounded-md border-2 border-transparent focus:border-2 focus:border-primary-300 outline-none transition-all ease-in-out"
           {...register("message", { required: true })}
@@ -123,10 +120,10 @@ const Contact: FC = () => {
         <Button
           size="md"
           icon="true"
-          label={isLoading ? "En cours..." : "Envoyer"}
+          label={isSent ? "En cours..." : "Envoyer"}
           type="submit"
         >
-          {isLoading ? (
+          {isSent ? (
             <Icon.LuLoader size="18" />
           ) : (
             <Icon.LuArrowRight size="18" />
