@@ -30,13 +30,13 @@ export default function JobPage() {
               Carrières{" "}
             </h4>
             <h1 className="text-lg md:text-xl font-semibold text-white">
-              Faites le grand saut
+              Faites le grand saut!
             </h1>
             <span className="w-10 h-1 bg-white rounded-md mt-2"></span>
             <p className="text-sm md:text-base text-white mt-3">
-              Vous ètes Fiable, ponctuel et professionnel ? Rejoignez les rangs
-              de Shield Signalisation et propulser votre carrière vers de
-              nouveau sommets.
+              Vous êtes fiable, ponctuel et professionnel ? Rejoignez les rangs
+              de Shield Signalisation et propulsez votre carrière vers de
+              nouveaux sommets.
             </p>
           </div>
         </div>

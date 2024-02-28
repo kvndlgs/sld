@@ -26,7 +26,7 @@ export default function Home() {
       <div className="w-full flex flex-col md:flex-row md:flex-wrap items-around justify-center mx-auto md:justify-around md:items-around py-16 px-6 md:px-20">
         <ServiceItem
           title="Signalisation routière"
-          description="Nos signaleurs vous permettrons d’atteindre vos objectifs en tout sécurité"
+          description="Nos signaleurs vous permettront d’atteindre vos objectifs en tout sécurité"
           img="/images/signalisation-icon.png"
           link="/services/signalisation"
         />
@@ -79,7 +79,7 @@ export default function Home() {
             >
               <FeatureItem
                 img={<Icon.LuShield size="32" />}
-                title="Nos signaleurs sont certifier et ont votre sûreter a coeur."
+                title="Nos signaleurs sont certifiés et ont votre sécurité à cœur."
                 description=""
               />
               <FeatureItem
@@ -94,7 +94,7 @@ export default function Home() {
               />
               <FeatureItem
                 img={<Icon.LuCloudLightning size="32" />}
-                title="Nous misons sur la qualitée de nos services, la rapidité d’exécution et la communication."
+                title="Nous misons sur la qualité de nos services, la rapidité d'exécution et la communication."
                 description=""
               />
             </div>
@@ -134,8 +134,8 @@ export default function Home() {
                 >
                   info@shieldsignalisation.com
                 </a>{" "}
-                ou encore, clavardez en direct pour plus d'information sur la
-                disponibilté de nos équipes dans votre region.
+                ou encore, chattez en direct pour plus d'informations sur la
+                disponibilité de nos équipes dans votre région.
               </p>
               <Link
                 className="bg-primary-100 text-primary-800 font-semibold py-3 px-4 shadow-md rounded-md hover:bg-primary-200"

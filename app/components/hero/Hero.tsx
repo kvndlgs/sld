@@ -25,7 +25,7 @@ export default function Hero() {
             </h1>
             <p className="pb-[40px] text-base text-darky-50">
               {" "}
-              Chaque chantier est unique et nos équipes mettrons en place une
+              Chaque chantier est unique et nos équipes mettront en place une
               solution adaptée a vos besoins.
             </p>
             <Link href="/services">

@@ -58,12 +58,12 @@ export default function About() {
         />
         <div>
           <p className="font-medium text-white text-align-left mx-auto px-4 md:px-20 md:mt-8 md:mb-12">
-            Jeune mais résolument amibitieuse, notre entreprise vise a atteindre
+            Jeune mais résolument ambitieuse, notre entreprise vise à atteindre
             un statut de leader dans l'industrie. Chez Shield Signalisation,
-            nous nous distinguons par nos normes de recrutement rigoureuse et
-            notre éthique de travail exceptionelle. La sécurité et le bien-être
+            nous nous distinguons par nos normes de recrutement rigoureuses et
+            notre éthique de travail exceptionnelle. La sécurité et le bien-être
             des travailleurs routiers ainsi que des usagers de la route nous
-            tient à coeur, et nous avons fait de cette priorité une seconde
+            tiennent à cœur, et nous avons fait de cette priorité une seconde
             nature.
           </p>
         </div>

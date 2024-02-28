@@ -80,7 +80,7 @@ export default function ServicesPage() {
         <div className="flex flex-wrap items-around justify-around pt-8 px-6 md:px-20">
           <ServiceItem
             title="Signalisation routière"
-            description="Nos signaleurs vous permettrons d’atteindre vos objectifs dans les délais et en tout sécurité"
+            description="Nos signaleurs vous permettront d’atteindre vos objectifs dans les délais et en tout sécurité"
             img="/images/signalisation-icon.png"
             link="/services/signalisation"
           />
@@ -98,7 +98,7 @@ export default function ServicesPage() {
           />
           <ServiceItem
             title="24 Heures sur 24, 7 jours sur 7"
-            description="Équipes de signaleurs expérimenter prêts a intervenir en tout temps pour vos urgences. partout au Québec."
+            description="Équipes de signaleurs expérimentés prêts à intervenir en tout temps pour vos urgences, partout au Québec."
             img="/images/services-24h.png"
             link="/"
           />

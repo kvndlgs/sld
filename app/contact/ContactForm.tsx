@@ -23,7 +23,7 @@ export default function ContactForm() {
             <span className="w-10 h-1 bg-white rounded-md mt-2"></span>
             <p className="text-sm md:text-base text-white mt-3">
               Nos équipes de signaleurs se feront un plaisir de vous aider à
-              mettre en place une solution adapté à tout vos besoins en matière
+              mettre en place une solution adaptée à tous vos besoins en matière
               de signalisation routière.
             </p>
           </div>
