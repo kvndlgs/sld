@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
   
     const transport = nodemailer.createTransport({
       host: "web-smtp-oxcs.hostingplatform.com",
-      port: '587',
+      port: 587,
       secure: true,
       debug: true,
       logger: true,
