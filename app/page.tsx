@@ -125,7 +125,7 @@ export default function Home() {
                   className="text-white font-semibold"
                   href="callto:18887603504"
                 >
-                  1 888-760-3504
+                  1 888-917-6375
                 </a>
                 . par courriel a l'adresse{" "}
                 <a
