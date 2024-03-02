@@ -18,7 +18,7 @@ export type QuoteData = {
 
 export const Quote: FC = () => {
   const { register, handleSubmit } = useForm<QuoteData>();
-  const [isSent, setIsSent] = useState();
+  const [isSent, setIsSent] = useState(false);
 
   function onSubmit(data: QuoteData) {
     sendQuote(data);
