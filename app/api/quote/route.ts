@@ -8,6 +8,9 @@ export async function POST(request: NextRequest) {
     const transport = nodemailer.createTransport({
       host: "web-smtp-oxcs.hostingplatform.com",
       port: '587',
+      secure: true,
+      debug: true,
+      logger: true,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD,

@@ -8,11 +8,21 @@ export async function POST(request: NextRequest) {
     const transport = nodemailer.createTransport({
       host: "web-smtp-oxcs.hostingplatform.com",
       port: '587',
+      debug: true,
+      logger: true,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD,
       },
     });
+
+    transport.verify(function(error, success) {
+      if(error) {
+        console.log(error);
+      } else {
+        console.log('Server is ready to take your messages.');
+      }
+    })
   
     const mailOptions: Mail.Options = {
       from: process.env.EMAIL,
