@@ -8,6 +8,7 @@ import { sendQuote } from "@/app/utils/handleSend";
 export type QuoteData = {
   name: string;
   email: string;
+  message: string;
   phone: string;
   role: string;
   company: string;
