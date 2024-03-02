@@ -20,7 +20,6 @@ export async function POST(request: NextRequest) {
     const mailOptions: Mail.Options = {
       from: process.env.EMAIL,
       to: process.env.EMAIL,
-      // cc: email, (uncomment this line if you want to send a copy to the sender)
       subject: `Message de ${name} Courriel: ${email}`,
       text: message,
       html: `Soumission de la part de ${name}.${role} pour l'entreprise ${company}. Nombre d'équipes requise: ${staff} dans la region de ${region}. Rejoindre au numero
